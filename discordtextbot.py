@@ -7,15 +7,26 @@ import random
 
 from discord.ext import commands
 
+'''
+THINGS TO ADD
 
+FINISH TRIGRAM GAME
+
+BLACKJACK GAME
+
+CHESS GAME
+
+'''
 
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 guild = os.getenv('DISCORD_GUILD')
-client = commands.Bot(command_prefix = '=')
 
-game = discord.Game("pizza time")
+activity = discord.Streaming(name="MTG CONTENT", url="twitch.tv/yamakiller")
+
+client = commands.Bot(command_prefix = '=', activity=activity, status=discord.Status.online)
+
 
 
 
@@ -36,7 +47,6 @@ async def on_ready():
     server =  discord.utils.get(client.guilds, name=guild)
     print(f'{client.user} has connected to Discord!\n'
           f'{server.name}(id: {server.id})')
-    await client.change_presence(status=discord.Status.online, activity=Streaming("yamakiller", "twitch.tv/yamakiller", game="MaGiC ThE GaThErInG",));
 
 
 @client.command(help="you say bruh i say <:FazeUp:555302712007196672>" )
@@ -50,14 +60,20 @@ async def roll(ctx, *args):
     else:
         ctx.send('Must provide two integers *low* and *high*')
 
-@client.command(help="")
+@client.command(help="trigrams <number between 1 and 3000")
 async def trigrams(ctx, *args):
     try:
         depth = int(args[0])
     except:
-        ctx.send('Proper useage is for example\n'
+        ctx.send('Proper useage is\n'
         '\"=trigrams 500\"')
-        return 1
+        return 
+    
+    
+
+@client.command(help="chess game")
+async def chess(ctx, *args):
+    pass
     
     
 

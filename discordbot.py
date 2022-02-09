@@ -1,8 +1,7 @@
 import discord
 import os
-import youtube_dl
 from dotenv import load_dotenv
-import youtube
+import MilesYoutube
 import asyncio
 import random
 
@@ -12,23 +11,28 @@ class Song(object):
     folder = 'downloads/'
     downloaded = False
     
-    def __init__(self, meta):
-        self.title = meta['title']
-        self.duratoin = meta['duration']
-        self.url = meta['webpage_url']
+    def __init__(self, title, url, video_id):
+        self.title = title
+        self.duration = 0
+        self.url = url
+        self.video_id = video_id
 
     def __repr__(self):
         return self.title
 
     def location(self):
         string = self.folder
-        string += self.title.replace(' ', '_')
-        string = string.replace('\'s', '_s')
-        for ch in ['\\', ']', '[', '(', ')', '}', '{', '\'', '\"']:
-            if ch in string:
-                string = string.replace(ch, '')
+        string += self.video_id
+        # string += self.title.replace(' ', '_')
+        # string = string.replace('\'s', '_s')
+        # for ch in ['\\', ']', '[', '(', ')', '}', '{', '\'', '\"']:
+        #     if ch in string:
+        #         string = string.replace(ch, '')
         string += ".mp3"
         return string
+
+    def is_downloaded(self):
+        os.path.exists(self.location)
 
 
 class Player(object):
@@ -54,7 +58,7 @@ class Player(object):
     def clear(self):
         self.que.clear()
     
-    def isempty(self):
+    def is_empty(self):
         if self.que:
             return False
         else:
@@ -68,19 +72,18 @@ class Player(object):
             ret += '\n'
         return ret
 
-print('dab')
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 guild = os.getenv('DISCORD_GUILD')
 
-print('dab')
 client = commands.Bot(command_prefix = '=')
+game = discord.Game("@Miles if I break")
 
-game = discord.Game("pizza time")
-
-
+empty_song = Song("", "", "")
 player = None
-yt = youtube.Youtube()
+VC = None
+yt = MilesYoutube.YT()
+now_playing = empty_song
 
 @client.event
 async def on_ready():
@@ -88,22 +91,21 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!\n'
             f'{server.name}(id: {server.id})')
     await client.change_presence(status=discord.Status.online, activity=game);
-    """
-    while(1):
-        if player:
-            while not player.isempty():
-                if not player.isPlaying:
-                    for VC in client.voice_clients:
-                        if player.channel == VC.channel:
-                            song = player.dequeue
-                            if song:
-                                player.isPlaying = True
-                                VC.play(discord.FFmpegPCMAudio(song.location()), after=lambda: print('done'))
-                                player.isPlaying = False
-                            else:
-                                print("tried to play song but player was empty")
+    # while(1):
+    #     if player:
+    #         while not player.isempty():
+    #             if not player.isPlaying:
+    #                 for VC in client.voice_clients:
+    #                     if player.channel == VC.channel:
+    #                         song = player.dequeue
+    #                         if song:
+    #                             player.isPlaying = True
+    #                             VC.play(discord.FFmpegPCMAudio(song.location()), after=lambda: print('done'))
+    #                             player.isPlaying = False
+    #                         else:
+    #                             print("tried to play song but player was empty")
 
-    """
+    
 
 
 @client.command(help="you say bruh i say <:FazeUp:555302712007196672>" )
@@ -111,40 +113,43 @@ async def bruh(ctx):
     await ctx.send("<:FazeUp:555302712007196672>")
 
 @client.command(help="roll <low> <high>")
-async def roll(ctx, arg1, arg2):
-    ctx.send('{} rolled a  {}'.format(ctx.author.mention, random.randint(arg1, arg2))) 
+async def roll(ctx, arg1 = 0, arg2 = 100):
+    await ctx.send('{} rolled a  {}'.format(ctx.author.mention, random.randint(arg1, arg2))) 
 
 @client.command(help="adds bot to your current voice channel")
 async def join(ctx):
     channel = ctx.author.voice.channel
+    global player
+    player = Player(channel)
+    global VC
     VC = await channel.connect()
 
 @client.command(help="bot leaves")
 async def leave(ctx):
-    channel = ctx.author.voice.channel
-    for VC in client.voice_clients:
-        if channel == VC.channel:
-            await VC.disconnect()
-            return
-    else:
+    try:
+        global VC
+        await VC.disconnect()
+        VC = None
+        global player
+        player = None
+        
+    except:
         await ctx.send("Not in voice channel")
 
 @client.command(help="displayes queued songs")
 async def queue(ctx):
-    global player
+    if not VC:
+        ctx.send("Must connect bot to a voice channel first using \"join\"")
     que = ''
-    if not player:
-        player = Player(ctx.author.voice.channel)
-    if player.isempty():
+    if player.is_empty():
         message = "Queue is empty"
     else:
-        message = 'Songs in queue:'
-        for item in player.que:
-            que += item.title
-            que += '\n'
+        message = f"Now Playing:\n[{now_playing.title}]({now_playing.url})\nSongs in queue:\n\n"
+        for i, song in enumerate(player.que):
+            message += f"{i + 1}. [{song.title}]({song.url})\n"
     e=discord.Embed.from_dict({
-        "title":f"{message}",
-        "description":f"{que}",
+        "title":f"Queue",
+        "description":f"{message}",
         })
     await ctx.send(embed=e)
     
@@ -152,38 +157,74 @@ async def queue(ctx):
 @client.command(help="adds song to queue")
 async def play(ctx, *, arg):
     channel = ctx.author.voice.channel
+    
+    if not is_in_channel_with_bot(ctx):
+        await ctx.send("You are not in the same voice channel")
+        return
+
+    if not VC:
+        ctx.send("Must connect bot to a voice channel first using \"join\"")
+        return
+
     global player
-    if not player:
-        player = Player(channel)
-    for VC in client.voice_clients:
-        if channel == VC.channel:
-            meta = yt.search(arg)
-            song = Song(meta)
-            yt.download(song.url)
-            e=discord.Embed.from_dict({
-                "description":f"Added {song.title} to queue",
+    title, url, video_id = yt.download_from_keyword(arg)
+    song = Song(title, url, video_id)
+    e = discord.Embed.from_dict({
+                "description":f"Added [{song.title}]({song.url}) to queue",
                 })
-            player.queue(song)
-            await ctx.send(embed=e)
-            if VC.is_playing():
-                pass
-
-            else:
-                play_next(VC)
-
-        else:
-            await ctx.send("You are not in a voice channel")
-
-
-def play_next(VC):
+    player.queue(song)
+    await ctx.send(embed=e)
     if VC.is_playing():
         pass
     else:
+        play_next(None)
+
+
+def play_song():
+    global now_playing
+    now_playing = player.dequeue()
+    VC.play(discord.FFmpegPCMAudio(now_playing.location()), after = play_next)
+
+def play_next(e):
+    global now_playing
+    now_playing = empty_song
+    if VC == None:
+        return
+    elif VC.is_playing():
+        return
+    elif player.is_empty():
+        return
+    else:
+        play_song()
+
+
+@client.command(help="Pause current song")
+async def pause(ctx):
+    VC.pause()
+
+@client.command(help="Stop playing")
+async def stop(ctx):
+    VC.stop()
+
+@client.command(help="Skip song")
+async def skip(ctx):
+    VC.stop()
+    play_next(None)
+
+@client.command(help="Resumes song")
+async def resume(ctx):
+    VC.resume()
+
+@client.command(help="Clear the queue")
+async def clear(ctx):
+    global player
+    player.clear()
     
-        VC.play(discord.FFmpegPCMAudio(player.dequeue().location()), after=lambda VC: play_next(VC))
 
+def is_in_channel_with_bot(ctx):
+    channel = ctx.author.voice.channel
+    return channel == VC.channel
 
-print('dab')
 client.run(token)
 
 
