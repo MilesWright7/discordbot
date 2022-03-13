@@ -59,7 +59,7 @@ class Player(object):
         self.que.append(song)
         self.length += 1
 
-    def queue_list(self, songs: list[Song]):
+    def queue_list(self, songs: [Song]):
         for song in songs:
             self.queue(song)
 
