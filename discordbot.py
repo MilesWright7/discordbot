@@ -1,6 +1,9 @@
+from asyncio.windows_events import NULL
 import discord
 import os
 from dotenv import load_dotenv
+import pytube
+from pytube.contrib.playlist import Playlist
 import MilesYoutube
 import asyncio
 import random
@@ -10,13 +13,12 @@ from discord.ext import commands
 
 class Song(object):
     folder = 'downloads/'
-    downloaded = False
     
-    def __init__(self, title, url, video_id):
-        self.title = title
-        self.duration = 0
-        self.url = url
-        self.video_id = video_id
+    def __init__(self, yt_obj : pytube.YouTube):
+        self.title = yt_obj.title
+        self.url = yt_obj.watch_url
+        self.video_id = yt_obj.video_id
+        self.yt_obj = yt_obj
 
     def __repr__(self):
         return self.title
@@ -24,20 +26,26 @@ class Song(object):
     def location(self):
         string = self.folder
         string += self.video_id
-        # string += self.title.replace(' ', '_')
-        # string = string.replace('\'s', '_s')
-        # for ch in ['\\', ']', '[', '(', ')', '}', '{', '\'', '\"']:
-        #     if ch in string:
-        #         string = string.replace(ch, '')
         string += ".mp3"
         return string
 
     def is_downloaded(self):
-        os.path.exists(self.location)
+        return os.path.exists(self.location())
+
+    def download(self):
+        if not self.is_downloaded():
+            MilesYoutube.download_from_pytube(self.yt_obj)
 
     def kill(self):
         # if too many files are being downloaded not called currently
-        os.remove(self.location)
+        os.remove(self.location())
+
+class PlaylistObj(object):
+    def __init__(self, yt_obj):
+        self.song_list = [Song(x) for x in yt_obj.videos]
+
+    def get_song_list(self):
+        return self.song_list
 
 
 class Player(object):
@@ -48,9 +56,13 @@ class Player(object):
         self.channel = channel
         self.length = 0
 
-    def queue(self, song):
+    def queue(self, song:Song):
         self.que.append(song)
         self.length += 1
+
+    def queue_list(self, songs: list[Song]):
+        for song in songs:
+            self.queue(song)
 
     def dequeue(self):
 
@@ -71,6 +83,9 @@ class Player(object):
             return False
         else:
             return True
+    def remove(self, index):
+        self.length -= 1
+        return self.que.pop(index)
 
 
     def __repr__(self):
@@ -87,13 +102,14 @@ guild = os.getenv('DISCORD_GUILD')
 client = commands.Bot(command_prefix = '=')
 game = discord.Game("@Miles if I break")
 
-empty_song = Song("", "", "")
+empty_song = None
 player = None
 VC = None
 yt = MilesYoutube.YT()
 now_playing = empty_song
 looping = False
 loop_size = 0
+main_ctx = None
 
 @client.event
 async def on_ready():
@@ -128,11 +144,14 @@ async def roll(ctx, arg1 = 0, arg2 = 100):
 
 @client.command(help="adds bot to your current voice channel can also use '=j'", aliases=['j'])
 async def join(ctx):
+    global main_ctx
+    main_ctx = ctx
     channel = ctx.author.voice.channel
     global player
     player = Player(channel)
     global VC
     VC = await channel.connect()
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Join", "description": "Hello"}))
     await start_bot_auto_leave()
 
 
@@ -141,6 +160,7 @@ async def leave(ctx):
     try:
         global VC
         await VC.disconnect()
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
         VC = None
         global player
         player = None
@@ -152,7 +172,7 @@ async def leave(ctx):
 @client.command(help="displayes queued songscan also use 'q'", aliases=["q"])
 async def queue(ctx):
     if not VC:
-        await ctx.send("Must connect bot to a voice channel first using '=join'")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Queue", "description": "Must connect bot to a voice channel first using '=join'"}))
     message = ''
     if now_playing != empty_song:
         message += f"Now Playing:\n[{now_playing.title}]({now_playing.url})\n\n"
@@ -180,7 +200,7 @@ async def queue(ctx):
             message += f"{i + 1}. [{song.title}]({song.url})\n"
 
     e=discord.Embed.from_dict({
-        "title":f"Queue",
+        "title":"Queue",
         "description":f"{message}",
         })
     await ctx.send(embed=e)
@@ -191,11 +211,11 @@ async def play(ctx, *, arg = None):
     channel = ctx.author.voice.channel
     
     if not is_in_channel_with_bot(ctx):
-        await ctx.send("You are not in the same voice channel")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "You are not in the same voice channel"}))
         return
 
     if not VC:
-        await ctx.send("Must connect bot to a voice channel first using \"join\"")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "Must connect bot to a voice channel first using \"join\""}))
         return
 
     if arg == None:
@@ -204,12 +224,25 @@ async def play(ctx, *, arg = None):
         return
 
     global player
-    title, url, video_id = yt.download_from_keyword(arg)
-    song = Song(title, url, video_id)
-    e = discord.Embed.from_dict({
-                "description":f"Added [{song.title}]({song.url}) to queue",
+    yt_obj, idx = yt.find_video(arg)
+    if idx == 0:
+        song = Song(yt_obj)
+        player.queue(song)
+        e = discord.Embed.from_dict({"title": "Play",
+                "description":f"Added [{song.title}]({song.url}) to queue"
                 })
-    player.queue(song)
+    else:
+        pl = PlaylistObj(yt_obj)
+        songs = pl.get_song_list()
+        message = ""
+        for s in songs:
+            message += f"Added [{s.title}]({s.url}) to queue\n"
+        if message == "":
+            message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
+        player.queue_list(songs)
+        e = discord.Embed.from_dict({"title": "From Playlist", 
+                                     "description": message})
+    
     await ctx.send(embed=e)
     if VC.is_playing():
         pass
@@ -222,6 +255,9 @@ async def play(ctx, *, arg = None):
 def play_song():
     global now_playing
     now_playing = player.dequeue()
+    now_playing.download()
+    if VC == None:
+        return
     VC.play(discord.FFmpegPCMAudio(now_playing.location()), after = play_next)
 
 def play_next(e):
@@ -241,6 +277,7 @@ def play_next(e):
     elif VC.is_playing():
         return
     elif player.is_empty():
+        now_playing = empty_song
         return
     else:
         now_playing = empty_song
@@ -250,7 +287,7 @@ def play_next(e):
 @client.command(help="Loops number of songs from top of queue defaluts to entire queue can also use '=l'", aliases=["l"])
 async def loop(ctx, *, arg = -1):
     if now_playing == empty_song:
-        await ctx.send("No songs playing. Can't loop nothing")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": "No songs playing. Can't loop nothing"}))
         return
 
     global looping
@@ -258,13 +295,13 @@ async def loop(ctx, *, arg = -1):
     looping = True
     if arg <= 0:
         loop_size = 0
-        await ctx.send("Now looping entire queue")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": "Now looping entire queue"}))
     elif arg > player.length + 1:
         loop_size = player.length + 1
-        await ctx.send("Now looping {player.length + 1} songs")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": "Now looping {player.length + 1} songs"}))
     else:
         loop_size = arg
-        await ctx.send(f"Now looping {arg} songs")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": f"Now looping {arg} songs"}))
 
 @client.command(help="Turns off looping can also use '=sl'", aliases=["sl"])
 async def stoploop(ctx):
@@ -272,22 +309,19 @@ async def stoploop(ctx):
     global loop_size
     looping = False
     loop_size = 0
-    await ctx.send("Looping stopped")
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Stop Loop", "description": "Looping stopped"}))
 
-@client.command(help="Pause current song")
+@client.command(help="Pause current song", aliases=["stop"])
 async def pause(ctx):
     VC.pause()
 
-@client.command(help="Stop playing")
-async def stop(ctx):
-    VC.stop()
-
 @client.command(help="Skip song can also use '=s'", aliases=["s"])
 async def skip(ctx):
-    VC.stop()
-    if looping:
-        await stoploop(ctx)
-    await ctx.send(f"Skipping {now_playing.title}")
+    VC.pause()
+    if now_playing == None:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Skip", "description": "Nothing to skip"}))
+        return
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Skip", "description": f"Skipping [{now_playing.title}]({now_playing.url})"}))
     play_next(None)
 
 @client.command(help="Resumes song")
@@ -300,7 +334,34 @@ async def clear(ctx):
         await stoploop(ctx)
     global player
     player.clear()
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Clear", "description": "Queue cleared"}))
     
+
+@client.command(help="Removes songs at specified indexes in the queue")
+async def remove(ctx, *, args):
+    int_args = []
+    for arg in args.split(" "):
+        try:
+            int_args.append(int(arg))
+
+        except ValueError:
+            await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Numbers only!"}))
+
+    int_args.sort(reverse=True)
+    for i in int_args:
+        if i > player.length or i < 1:
+            await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "A number is out of the queue's range"}))
+
+    message = ""
+    for i in int_args:
+        song = player.remove(i-1)
+        message = f"Removed {i}. [{song.title}]({song.url})\n" + message
+
+    global loop_size
+    if loop_size > player.length + 1:
+        loop_size = player.length + 1
+        
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": message}))
 
 def is_in_channel_with_bot(ctx):
     channel = ctx.author.voice.channel
@@ -310,7 +371,7 @@ async def start_bot_auto_leave():
     # sometimes the VC.channel.members returns with only the bot inside when I am in the call. Unsure why that happens.
     while VC:
         if len(VC.channel.members) <= 1:
-            await leave(None)
+            await leave(main_ctx)
             break
 
         await asyncio.sleep(300)
