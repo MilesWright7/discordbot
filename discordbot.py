@@ -146,10 +146,16 @@ async def join(ctx):
     global main_ctx
     main_ctx = ctx
     channel = ctx.author.voice.channel
+    if channel == None:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Join", "description": "You must be in a voice channel to use this command"}))
+        return
     global player
     player = Player(channel)
     global VC
-    VC = await channel.connect()
+    if VC == None:
+        VC = await channel.connect()
+    else:
+        await VC.move_to(channel)
     await ctx.send(embed=discord.Embed.from_dict({"title": "Join", "description": "Hello"}))
     await start_bot_auto_leave()
 
@@ -163,6 +169,10 @@ async def leave(ctx):
         VC = None
         global player
         player = None
+        global now_playing
+        now_playing = None
+        global looping
+        looping = False
         handle_downloads_space()
         
     except:
@@ -258,6 +268,8 @@ def play_song():
     if VC == None:
         return
     VC.play(discord.FFmpegPCMAudio(now_playing.location()), after = play_next)
+    # TODO : implement the below instead of the above
+    # VC.play(discord.FFmpegPCMAudio(now_playing.location()), after =lambda: client.loop.call_soon_threadsafe(playnext))
 
 def play_next(e):
     global now_playing
@@ -375,6 +387,8 @@ async def start_bot_auto_leave():
 
         await asyncio.sleep(300)
     return
+
+
 
 
 client.run(token)
