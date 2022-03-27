@@ -6,6 +6,7 @@ from pytube.contrib.playlist import Playlist
 import MilesYoutube
 import asyncio
 import random
+from time import sleep
 from SpaceManagement import handle_downloads_space
 
 from discord.ext import commands
@@ -221,6 +222,7 @@ async def play(ctx, *, arg = None):
     
     if not VC:
         await join(ctx)
+        sleep(3)
 
     if not is_in_channel_with_bot(ctx):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "You are not in the same voice channel"}))
