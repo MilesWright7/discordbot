@@ -60,7 +60,7 @@ class Player(object):
         self.que.append(song)
         self.length += 1
 
-    def queue_list(self, songs: [Song]):
+    def queue_list(self, songs):
         for song in songs:
             self.queue(song)
 
@@ -158,7 +158,7 @@ async def join(ctx):
     else:
         await VC.move_to(channel)
     await ctx.send(embed=discord.Embed.from_dict({"title": "Join", "description": "Hello"}))
-    await start_bot_auto_leave()
+    asyncio.create_task(start_bot_auto_leave())
 
 
 @client.command(help="bot leaves")
@@ -222,9 +222,8 @@ async def play(ctx, *, arg = None):
     
     if not VC:
         await join(ctx)
-        sleep(3)
 
-    if not is_in_channel_with_bot(ctx):
+    elif not is_in_channel_with_bot(ctx):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "You are not in the same voice channel"}))
         return
 
