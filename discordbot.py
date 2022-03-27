@@ -219,12 +219,11 @@ async def queue(ctx):
 async def play(ctx, *, arg = None):
     channel = ctx.author.voice.channel
     
+    if not VC:
+        await join(ctx)
+
     if not is_in_channel_with_bot(ctx):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "You are not in the same voice channel"}))
-        return
-
-    if not VC:
-        await ctx.send(embed=discord.Embed.from_dict({"title": "Play", "description": "Must connect bot to a voice channel first using \"join\""}))
         return
 
     if arg == None:
