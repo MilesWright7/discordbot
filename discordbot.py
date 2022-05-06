@@ -142,7 +142,7 @@ async def bruh(ctx):
 async def roll(ctx, arg1 = 0, arg2 = 100):
     await ctx.send('{} rolled a  {}'.format(ctx.author.mention, random.randint(arg1, arg2))) 
 
-@client.command(help="adds bot to your current voice channel can also use '=j'", aliases=['j'])
+@client.command(help="adds bot to your current voice channel can also use =j", aliases=['j'])
 async def join(ctx):
     global main_ctx
     main_ctx = ctx
@@ -179,7 +179,7 @@ async def leave(ctx):
     except:
         await ctx.send("Not in voice channel")
 
-@client.command(help="displayes queued songscan also use 'q'", aliases=["q"])
+@client.command(help="displayes queued songscan also use =q", aliases=["q"])
 async def queue(ctx):
     if not VC:
         await ctx.send(embed=discord.Embed.from_dict({"title": "Queue", "description": "Must connect bot to a voice channel first using '=join'"}))
@@ -216,7 +216,7 @@ async def queue(ctx):
     await ctx.send(embed=e)
     
 
-@client.command(help="adds song to queue can also use '=p'", aliases=["p"])
+@client.command(help="adds song to queue can also use =p", aliases=["p"])
 async def play(ctx, *, arg = None):
     channel = ctx.author.voice.channel
     
@@ -295,7 +295,7 @@ def play_next(e):
         play_song()
 
 
-@client.command(help="Loops number of songs from top of queue defaluts to entire queue can also use '=l'", aliases=["l"])
+@client.command(help="Loops number of songs from top of queue defaluts to entire queue can also use =l", aliases=["l"])
 async def loop(ctx, *, arg = -1):
     if now_playing == empty_song:
         await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": "No songs playing. Can't loop nothing"}))
@@ -314,7 +314,7 @@ async def loop(ctx, *, arg = -1):
         loop_size = arg
         await ctx.send(embed=discord.Embed.from_dict({"title": "Loop", "description": f"Now looping {arg} songs"}))
 
-@client.command(help="Turns off looping can also use '=sl'", aliases=["sl"])
+@client.command(help="Turns off looping can also use =sl", aliases=["sl"])
 async def stoploop(ctx):
     global looping
     global loop_size
@@ -326,7 +326,7 @@ async def stoploop(ctx):
 async def pause(ctx):
     VC.pause()
 
-@client.command(help="Skip song can also use '=s'", aliases=["s"])
+@client.command(help="Skip song can also use =s, =next, =n", aliases=["s", "next", "n"])
 async def skip(ctx):
     VC.pause()
     if now_playing == None:
@@ -339,7 +339,7 @@ async def skip(ctx):
 async def resume(ctx):
     VC.resume()
 
-@client.command(help="Clear the queue can also use '=c'", aliases=["c"])
+@client.command(help="Clear the queue can also use =c", aliases=["c"])
 async def clear(ctx):
     if looping:
         await stoploop(ctx)
