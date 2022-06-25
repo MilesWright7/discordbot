@@ -412,10 +412,9 @@ async def davriel(ctx):
     offer1, offer2, offer3 = random.sample(range(0,8),3)
     cond1, cond2, cond3 = random.sample(range(0,8),3)
 
-    await ctx.send(embed=discord.Embed.from_dict({"title": "Offers", "description": f"Choose one offer.\n\n1.\t{Offers[offer1]}\n2.\t{Offers[offer2]}\n3.\t{Offers[offer3]}"}))
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Offers", "description": f"Choose one offer.\n\n||1.\t{Offers[offer1]}\n2.\t{Offers[offer2]}\n3.\t{Offers[offer3]}||"}))
 
-    sleep(10)
-    await ctx.send(embed=discord.Embed.from_dict({"title": "Conditions", "description": f"Choose one Condition.\n\n1.\t{Conditions[cond1]}\n2.\t{Conditions[cond2]}\n3.\t{Conditions[cond3]}"}))
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Conditions", "description": f"Choose one Condition.\n\n||1.\t{Conditions[cond1]}\n2.\t{Conditions[cond2]}\n3.\t{Conditions[cond3]}||"}))
 
 #endregion
 
