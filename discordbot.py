@@ -296,7 +296,7 @@ async def play(ctx, *, arg = None):
         songs = pl.get_song_list()
         message = ""
         for s in songs:
-            message += f"Added [{s.title}]({s.url}) to queue\n"
+            message += f"Added [{s.title}]({s.url}) {utils.seconds_to_time(song.length)}\n"
         if message == "":
             message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
         player.queue_list(songs)
