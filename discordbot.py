@@ -255,8 +255,8 @@ async def queue(ctx):
         message += f"Durration of queue: {utils.seconds_to_time(total_durration)}"
 
     # discord throws error if embed message length > 6000
-    if len(message) > 5500:
-        message = message[: message.find("\n", 5500)]
+    if len(message) > 1500:
+        message = message[: message.find("\n", 1500)]
         message += f"...\nDurration of queue: {utils.seconds_to_time(total_durration)}"
 
     e=discord.Embed.from_dict({
@@ -299,8 +299,8 @@ async def play(ctx, *, arg = None):
         if message == "":
             message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
         player.queue_list(songs)
-        if len(message) > 5500:
-            message = message[: message.find("\n", 5500)]
+        if len(message) > 1500:
+            message = message[: message.find("\n", 1500)]
             message += "..."
         e = discord.Embed.from_dict({"title": "From Playlist", 
                                      "description": message})
