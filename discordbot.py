@@ -204,17 +204,18 @@ async def join(ctx):
 @client.command(help="bot leaves")
 async def leave(ctx):
     try:
-        global VC
-        await VC.disconnect()
-        await ctx.send(embed=discord.Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
-        VC = None
         global player
+        player.clear()
         player = None
         global now_playing
         now_playing = None
         global looping
         looping = False
         handle_downloads_space()
+        global VC
+        await VC.disconnect()
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
+        VC = None
         
     except:
         await ctx.send(embed=discord.Embed.from_dict({"title": "Leave", "description": "I'm already gone"}))
