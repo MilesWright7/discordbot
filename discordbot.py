@@ -299,6 +299,9 @@ async def play(ctx, *, arg = None):
         if message == "":
             message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
         player.queue_list(songs)
+        if len(message) > 5500:
+            message = message[: message.find("\n", 5500)]
+            message += "..."
         e = discord.Embed.from_dict({"title": "From Playlist", 
                                      "description": message})
     
