@@ -1,3 +1,9 @@
+"""
+A discord music bot with some other functionality. Poorly put together.
+Mainly made using the depricated discord.py library.
+Authored by Miles Wright
+"""
+from sqlite3 import converters
 import discord
 import os
 from dotenv import load_dotenv
@@ -12,6 +18,9 @@ import requests
 import base64
 import io
 import aiohttp
+import utils
+
+from discord.opus import Encoder as OpusEncoder
 
 
 from discord.ext import commands
@@ -24,6 +33,8 @@ class Song(object):
         self.url = yt_obj.watch_url
         self.video_id = yt_obj.video_id
         self.yt_obj = yt_obj
+        self.length = yt_obj.length
+        self.current_time = 0
 
     def __repr__(self):
         return self.title
@@ -99,6 +110,30 @@ class Player(object):
             ret += item.title
             ret += '\n'
         return ret
+
+class MyAudioSource(discord.AudioSource):
+
+    def __init__(self, song):
+        self.song = song
+        self.audio = discord.FFmpegPCMAudio(song.location())
+
+    def read(self):
+        self.song.current_time += .02
+        return self.audio.read()
+
+    def cleanup(self):
+        self.audio.cleanup()
+
+    def seek(self, seconds):
+        # delete the old audio and make it fresh again
+        self.audio.cleanup()
+        self.audio = discord.FFmpegPCMAudio(self.song.location())
+
+        # read that amount of time off the front of the file
+        self.audio._stdout.read(OpusEncoder.FRAME_SIZE * seconds * 50)
+        self.song.current_time = seconds
+
+
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -182,7 +217,7 @@ async def leave(ctx):
         handle_downloads_space()
         
     except:
-        await ctx.send("Not in voice channel")
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Leave", "description": "I'm already gone"}))
 
 @client.command(help="displayes queued songscan also use =q", aliases=["q"])
 async def queue(ctx):
@@ -190,29 +225,32 @@ async def queue(ctx):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Queue", "description": "Must connect bot to a voice channel first using '=join'"}))
     message = ''
     if now_playing != empty_song:
-        message += f"Now Playing:\n[{now_playing.title}]({now_playing.url})\n\n"
+        message += f"Now Playing:\n[{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}\n\n"
     if player.is_empty() and not looping:
         message += "Queue is empty"
     elif looping:
         message += "Up next in loop: \nuse '=sl' to stop looping\n"
         if loop_size == 0:
             for i, song in enumerate(player.que):
-                message += f"{i + 1}. [{song.title}]({song.url})\n"
+                message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
 
         else:
             for i in range(loop_size - 1):
-                message += f"{i + 1}. [{player.que[i].title}]({player.que[i].url})\n"
+                message += f"{i + 1}. [{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
             
             if loop_size - 1 < player.length:
                 message += f"Out of loop:\n"
                 for i in range(loop_size -1, player.length):
-                    message += f"[{player.que[i].title}]({player.que[i].url})\n"
+                    message += f"[{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
 
             
     else:
         message += f"Songs in queue:\n"
+        total_durration = 0
         for i, song in enumerate(player.que):
-            message += f"{i + 1}. [{song.title}]({song.url})\n"
+            message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(player.que[i].length)}\n"
+            total_durration += song.length
+        message += f"Durration of queue: {utils.seconds_to_time(total_durration)}"
 
     e=discord.Embed.from_dict({
         "title":"Queue",
@@ -243,7 +281,7 @@ async def play(ctx, *, arg = None):
         song = Song(yt_obj)
         player.queue(song)
         e = discord.Embed.from_dict({"title": "Play",
-                "description":f"Added [{song.title}]({song.url}) to queue"
+                "description":f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}"
                 })
     else:
         pl = PlaylistObj(yt_obj)
@@ -272,7 +310,7 @@ def play_song():
     now_playing.download()
     if VC == None:
         return
-    VC.play(discord.FFmpegPCMAudio(now_playing.location()), after = play_next)
+    VC.play(MyAudioSource(now_playing), after = play_next)
     # TODO : implement the below instead of the above
     # VC.play(discord.FFmpegPCMAudio(now_playing.location()), after =lambda: client.loop.call_soon_threadsafe(playnext))
 
@@ -452,6 +490,44 @@ async def davriel(ctx):
     await ctx.send(embed=discord.Embed.from_dict({"title": "Conditions", "description": f"Choose one Condition.\n\n||1.\t{Conditions[cond1]}\n2.\t{Conditions[cond2]}\n3.\t{Conditions[cond3]}||"}))
 
 #endregion
+
+
+@client.command(help="seeks to time in current track", aliases=["jump"] )
+async def seek(ctx, time):
+    converted_time = utils.time_to_seconds(time)
+    if converted_time < 0:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Seek", "description": "Provide a valid time format, format of minutes:seconds or only seconds\nFor example: =seek 150 or =seek 2:30"}))
+        return
+
+    if converted_time > now_playing.length:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Seek", "description": "Time specified is longer than current song's durration"}))
+        return
+
+    VC.pause()
+    VC.source.seek(converted_time)
+    VC.resume()
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Seek", "description": f"Playing [{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}"}))
+    return
+
+@client.command(help="skips the given amount of time in current track", aliases=["ff"] )
+async def fastforward(ctx, time):
+    converted_time = utils.time_to_seconds(time)
+    if converted_time < 0:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Fast Forward", "description": "Provide a valid time format, format of minutes:seconds or only seconds\nFor example: =seek 150 or =seek 2:30"}))
+        return
+    
+    seek_time = int(converted_time + now_playing.current_time)
+    if seek_time > now_playing.length:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Seek", "description": "Time specified is longer than current song's durration"}))
+        return
+    
+    VC.pause()
+    VC.source.seek(seek_time)
+    VC.resume()
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Fast Forward", "description": f"Playing [{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}"}))
+    return
+
+
 
 client.run(token)
 
