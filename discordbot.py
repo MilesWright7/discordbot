@@ -223,6 +223,8 @@ async def leave(ctx):
 async def queue(ctx):
     if not VC:
         await ctx.send(embed=discord.Embed.from_dict({"title": "Queue", "description": "Must connect bot to a voice channel first using '=join'"}))
+        return
+
     message = ''
     if now_playing != empty_song:
         message += f"Now Playing:\n[{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}\n\n"
