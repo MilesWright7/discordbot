@@ -252,6 +252,11 @@ async def queue(ctx):
             total_durration += song.length
         message += f"Durration of queue: {utils.seconds_to_time(total_durration)}"
 
+    # discord throws error if embed message length > 6000
+    if len(message) > 5500:
+        message = message[: message.find("\n", 5500)]
+        message += f"...\nDurration of queue: {utils.seconds_to_time(total_durration)}"
+
     e=discord.Embed.from_dict({
         "title":"Queue",
         "description":f"{message}",
