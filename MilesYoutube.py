@@ -9,12 +9,15 @@ class YT:
     watch_re = re.compile('watch\\?v=')
     playlist_re = re.compile('list=')
     index_re = re.compile('index=')
+    alt_yt_link_re = re.compile('youtu.be/')
+    yt_watch_string = "https://www.youtube.com/watch?v="
+    yt_querry_string = "https://www.youtube.com/results?search_query="
 
     def search(this, keyword:str):
         clean_keyword = this.clean_keyword(keyword)
-        html = urllib.request.urlopen("https://www.youtube.com/results?search_query=" + clean_keyword)
+        html = urllib.request.urlopen(this.yt_querry_string + clean_keyword)
         videoIds = re.findall(r"watch\?v=(\S{11})", html.read().decode())
-        return "https://www.youtube.com/watch?v=" + videoIds[0]
+        return this.yt_watch_string + videoIds[0]
 
     def download_from_url(this, url:str, ):
         try:
@@ -51,7 +54,13 @@ class YT:
         is_playlist = False
         idx = 1
 
+        # for links of the form youtu.be/<video_id>
+        alt_youtube_link = this.alt_yt_link_re.search(input)
+        if alt_youtube_link:
+            input = this.yt_watch_string + input[alt_youtube_link.span()[1]:]
+            is_link = True
 
+        # for playlist links
         playlist_search = this.playlist_re.search(input)
         if playlist_search:
             is_playlist = True
@@ -59,6 +68,7 @@ class YT:
             if index_search:
                 idx = int(input[index_search.span()[1]:])
 
+        # for standard youtube.com/watch... links
         watch_search = this.watch_re.search(input)
         if watch_search:
             is_link = True
@@ -100,6 +110,5 @@ def download_from_pytube(yt_obj:pytube.YouTube):
 
 if __name__ == '__main__':
     yt = YT()
-    title, url = yt.download_from_keyword("victor wooten")
-    print(f"title {title} url {url}")
+    yt.download_from_keyword("victor wooten")
 
