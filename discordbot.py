@@ -3,6 +3,7 @@ A discord music bot with some other functionality. Poorly put together.
 Mainly made using the depricated discord.py library.
 Authored by Miles Wright
 """
+from functools import total_ordering
 from sqlite3 import converters
 import discord
 import os
@@ -227,6 +228,7 @@ async def queue(ctx):
         return
 
     message = ''
+    total_durration = 0
     if now_playing != empty_song:
         message += f"Now Playing:\n[{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}\n\n"
     if player.is_empty() and not looping:
@@ -236,15 +238,19 @@ async def queue(ctx):
         if loop_size == 0:
             for i, song in enumerate(player.que):
                 message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
+                total_durration += song.length
 
         else:
             for i in range(loop_size - 1):
                 message += f"{i + 1}. [{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
+                total_durration += song.length
             
             if loop_size - 1 < player.length:
                 message += f"Out of loop:\n"
                 for i in range(loop_size -1, player.length):
                     message += f"[{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
+
+        message += f"Durration of loop: {utils.seconds_to_time(total_durration)}"
 
             
     else:
@@ -403,24 +409,23 @@ async def clear(ctx):
     
 
 @client.command(help="Removes songs at specified indexes in the queue")
-async def remove(ctx, *, args):
-    int_args = []
-    for arg in args.split(" "):
-        try:
-            int_args.append(int(arg))
+async def remove(ctx, index):
+    try:
+        idx = int(index)
+    except ValueError:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Numbers only!"}))
+        return
 
-        except ValueError:
-            await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Numbers only!"}))
+    if (abs(idx) > player.length)
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Number larger than the queue"}))
+        return
 
-    int_args.sort(reverse=True)
-    for i in int_args:
-        if i > player.length or i < 1:
-            await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "A number is out of the queue's range"}))
+    if(idx >= 0):
+        song = player.remove(idx - 1)
+    else:
+        song = player.remove(idx)
 
-    message = ""
-    for i in int_args:
-        song = player.remove(i-1)
-        message = f"Removed {i}. [{song.title}]({song.url})\n" + message
+    message = f"Removed {i}. [{song.title}]({song.url})\n" + message
 
     global loop_size
     if loop_size > player.length + 1:
