@@ -416,7 +416,7 @@ async def remove(ctx, index):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Numbers only!"}))
         return
 
-    if (abs(idx) > player.length)
+    if (abs(idx) > player.length):
         await ctx.send(embed=discord.Embed.from_dict({"title": "Remove", "description": "Number larger than the queue"}))
         return
 
