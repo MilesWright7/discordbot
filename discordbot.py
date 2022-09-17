@@ -290,8 +290,8 @@ async def play(ctx, *, arg = None):
         pl = PlaylistObj(yt_obj)
         songs = pl.get_song_list()
         message = ""
-        for s in songs:
-            message += f"Added [{s.title}]({s.url}) {utils.seconds_to_time(song.length)}\n"
+        for song in songs:
+            message += f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
         if message == "":
             message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
         player.queue_list(songs)
@@ -414,7 +414,7 @@ async def remove(ctx, index):
     else:
         song = player.remove(idx)
 
-    message = f"Removed {i}. [{song.title}]({song.url})\n" + message
+    message = f"Removed {idx}. [{song.title}]({song.url})\n" + message
 
     global loop_size
     if loop_size > player.length + 1:
