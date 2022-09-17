@@ -1,6 +1,7 @@
 
 
 def seconds_to_time(time):
+    time = int(time)
     minutes = time // 60
     seconds = time - (minutes * 60)
 

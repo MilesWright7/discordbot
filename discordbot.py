@@ -20,6 +20,8 @@ import base64
 import io
 import aiohttp
 import utils
+from MyAudioSource import MyAudioSource
+
 
 from discord.opus import Encoder as OpusEncoder
 
@@ -112,27 +114,6 @@ class Player(object):
             ret += '\n'
         return ret
 
-class MyAudioSource(discord.AudioSource):
-
-    def __init__(self, song):
-        self.song = song
-        self.audio = discord.FFmpegPCMAudio(song.location())
-
-    def read(self):
-        self.song.current_time += .02
-        return self.audio.read()
-
-    def cleanup(self):
-        self.audio.cleanup()
-
-    def seek(self, seconds):
-        # delete the old audio and make it fresh again
-        self.audio.cleanup()
-        self.audio = discord.FFmpegPCMAudio(self.song.location())
-
-        # read that amount of time off the front of the file
-        self.audio._stdout.read(OpusEncoder.FRAME_SIZE * seconds * 50)
-        self.song.current_time = seconds
 
 
 
@@ -151,6 +132,7 @@ now_playing = empty_song
 looping = False
 loop_size = 0
 main_ctx = None
+playback_speed = 1
 
 @client.event
 async def on_ready():
@@ -212,6 +194,8 @@ async def leave(ctx):
         now_playing = None
         global looping
         looping = False
+        global playback_speed
+        playback_speed = 1
         handle_downloads_space()
         global VC
         await VC.disconnect()
@@ -228,43 +212,48 @@ async def queue(ctx):
         return
 
     message = ''
+    playback_string = ''
     total_durration = 0
+    if playback_speed != 1:
+        playback_string += f"Playback speed: {playback_speed * 100:.0f}%"
     if now_playing != empty_song:
-        message += f"Now Playing:\n[{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}\n\n"
+        message += f"Now Playing:\n[{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length / VC.source.playback_speed)}\n{playback_string}\n"
+
+
     if player.is_empty() and not looping:
         message += "Queue is empty"
     elif looping:
         message += "Up next in loop: \nuse '=sl' to stop looping\n"
         if loop_size == 0:
             for i, song in enumerate(player.que):
-                message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
+                message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(song.length / playback_speed)}\n"
                 total_durration += song.length
 
         else:
             for i in range(loop_size - 1):
-                message += f"{i + 1}. [{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
+                message += f"{i + 1}. [{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length / playback_speed)}\n"
                 total_durration += song.length
             
             if loop_size - 1 < player.length:
                 message += f"Out of loop:\n"
                 for i in range(loop_size -1, player.length):
-                    message += f"[{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length)}\n"
+                    message += f"[{player.que[i].title}]({player.que[i].url}) {utils.seconds_to_time(player.que[i].length / playback_speed)}\n"
 
-        message += f"Durration of loop: {utils.seconds_to_time(total_durration)}"
+        message += f"Durration of loop: {utils.seconds_to_time(total_durration / playback_speed)}"
 
             
     else:
         message += f"Songs in queue:\n"
         total_durration = 0
         for i, song in enumerate(player.que):
-            message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(player.que[i].length)}\n"
+            message += f"{i + 1}. [{song.title}]({song.url}) {utils.seconds_to_time(player.que[i].length / playback_speed)}\n"
             total_durration += song.length
-        message += f"Durration of queue: {utils.seconds_to_time(total_durration)}"
+        message += f"Durration of queue: {utils.seconds_to_time(total_durration / playback_speed)}"
 
     # discord throws error if embed message length > 6000
     if len(message) > 1500:
         message = message[: message.find("\n", 1500)]
-        message += f"\nAnd more...\nDurration of queue: {utils.seconds_to_time(total_durration)}"
+        message += f"\nAnd more...\nDurration of queue: {utils.seconds_to_time(total_durration / playback_speed)}"
 
     e=discord.Embed.from_dict({
         "title":"Queue",
@@ -327,7 +316,7 @@ def play_song():
     now_playing.download()
     if VC == None:
         return
-    VC.play(MyAudioSource(now_playing), after = play_next)
+    VC.play(MyAudioSource(now_playing, playback_speed), after = play_next)
     # TODO : implement the below instead of the above
     # VC.play(discord.FFmpegPCMAudio(now_playing.location()), after =lambda: client.loop.call_soon_threadsafe(playnext))
 
@@ -507,7 +496,6 @@ async def davriel(ctx):
 
 #endregion
 
-
 @client.command(help="seeks to time in current track", aliases=["jump"] )
 async def seek(ctx, time):
     converted_time = utils.time_to_seconds(time)
@@ -542,6 +530,25 @@ async def fastforward(ctx, time):
     VC.resume()
     await ctx.send(embed=discord.Embed.from_dict({"title": "Fast Forward", "description": f"Playing [{now_playing.title}]({now_playing.url}) {utils.seconds_to_time(int(now_playing.current_time))}/{utils.seconds_to_time(now_playing.length)}"}))
     return
+
+@client.command(help="skips the given amount of time in current track", aliases=["speed"] )
+async def playbackspeed(ctx, speed):
+    try:
+        as_float = float(speed)
+    except:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Playback Speed", "description": "Invalid Input! Input must be a number between 0.5 and 2.0"}))
+        return
+
+    if as_float > 2.0 or as_float < 0.5:
+        await ctx.send(embed=discord.Embed.from_dict({"title": "Playback Speed", "description": "Invalid Input! Input must be a number between 0.5 and 2.0"}))
+        return
+
+    global playback_speed
+    playback_speed = as_float
+    
+    await ctx.send(embed=discord.Embed.from_dict({"title": "Playback Speed", "description": f"Set playback speed to {as_float * 100:.0f}%\nWill take effect next song that starts"}))
+    return
+
 
 
 
