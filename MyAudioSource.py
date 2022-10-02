@@ -26,5 +26,5 @@ class MyAudioSource(discord.AudioSource):
         self.audio = discord.FFmpegPCMAudio(self.song.location())
 
         # read that amount of time off the front of the file
-        self.audio._stdout.read(OpusEncoder.FRAME_SIZE * seconds * 50)
+        self.audio._stdout.read(discord.OpusEncoder.FRAME_SIZE * seconds * 50)
         self.song.current_time = seconds
