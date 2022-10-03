@@ -57,6 +57,16 @@ class VoiceBot(commands.Bot):
 				self.load_extension(f'cogs.{cog}')
 		logging.info('Successfully loaded all cogs!')
 
+	def reset_defaults(self):
+		
+			self.player = None
+			self.now_playing = None
+			self.looping = False
+			self.playback_speed = 1
+			self.nightcore = False
+			self.VC = None
+
+
 
 	def ensure_player(self):
 		if self.player == None:

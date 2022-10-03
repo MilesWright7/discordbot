@@ -28,4 +28,6 @@ class Remove(commands.Cog):
 		else:
 			song = self.bot.player.remove(idx)
 
-		message = f"Removed {idx}. [{song.title}]({song.url})\n" + message
+		message = f"Removed {idx}. [{song.title}]({song.url})"
+		
+		await ctx.send(embed=Embed.from_dict({"title": "Remove", "description": message}))

@@ -15,15 +15,11 @@ class Leave(commands.Cog):
 	@commands.command(help="bot leaves")
 	async def leave(self, ctx):
 		try:
-			self.bot.player = None
-			self.bot.now_playing = None
-			self.bot.looping = False
-			self.bot.playback_speed = 1
-			handle_downloads_space()
 			await self.bot.VC.disconnect()
+			self.bot.reset_defaults()
+			handle_downloads_space()
 			await ctx.send(embed=Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
 			self.bot.log("Leave", ctx.author.id, ctx.author.name)
-			self.bot.VC = None
 		
 		except:
 			await ctx.send(embed=Embed.from_dict({"title": "Leave", "description": "I'm already gone"}))
