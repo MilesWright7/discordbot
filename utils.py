@@ -1,5 +1,3 @@
-
-
 def seconds_to_time(time):
     time = int(time)
     minutes = time // 60
@@ -11,6 +9,7 @@ def seconds_to_time(time):
     ret += f"{seconds:02}"
     return ret
 
+
 def time_to_seconds(time):
     split = time.split(":")
     try:
@@ -21,7 +20,6 @@ def time_to_seconds(time):
 
     except Exception:
         return -1
-
 
 
 if __name__ == "__main__":

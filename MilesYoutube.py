@@ -77,18 +77,18 @@ class YT:
             try:
                 pl = pytube.Playlist(input)
                 if pl:
-                    return pl, idx
+                    return pl, True
 
             except:
                 pass
         if is_link:
             try:
                 vid = pytube.YouTube(input)
-                return vid, 0
+                return vid, False
             except:
                 pass
 
-        return pytube.YouTube(this.search(input)), 0
+        return pytube.YouTube(this.search(input)), False
 
         
 def download_from_pytube(yt_obj:pytube.YouTube):
