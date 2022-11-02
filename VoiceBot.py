@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 import pytube
 import MilesYoutube
 import logging
+import random
 from discord.ext import commands
 
 
@@ -170,6 +171,10 @@ class Player(object):
 	def remove(self, index):
 		self.length -= 1
 		return self.que.pop(index)
+
+
+	def shuffle(self):
+		random.shuffle(self.que)
 
 
 	def __repr__(self):
