@@ -3,6 +3,7 @@ import discord
 
 class MyAudioSource(discord.AudioSource):
 	def __init__(self, song, playbackSpeed = 1, nightcore = False):
+		self.playing_sound = False
 		self.song = song
 		song.current_time = 0
 		self.playback_speed = playbackSpeed
@@ -44,4 +45,4 @@ class MyAudioSource(discord.AudioSource):
 
 	def play_sound(self, sound):
 		self.sound = discord.FFmpegAudio(sound.location())
-		self.playing_sond = True
+		self.playing_sound = True
