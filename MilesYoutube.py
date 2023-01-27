@@ -3,6 +3,8 @@ import urllib.request
 import os
 import pytube
 import re
+from pytube.innertube import InnerTube
+import pathlib
 
 class YT:
 
@@ -74,7 +76,7 @@ class YT:
 				pass
 		if is_link:
 			try:
-				vid = pytube.YouTube(input)
+				vid = pytube.YouTube(input, use_oath=True)
 				return vid, False
 			except:
 				pass
@@ -96,5 +98,10 @@ def download_from_pytube(yt_obj:pytube.YouTube):
 
 if __name__ == '__main__':
 	yt = YT()
-	yt.download_from_keyword("victor wooten")
+	vid = pytube.YouTube("https://www.youtube.com/watch?v=N3zvFU49u08", use_oauth=True)
+
+	vid.age_restricted
+	vid.bypass_age_gate()
+	vid.streams.get_audio_only().download()
+	
 
