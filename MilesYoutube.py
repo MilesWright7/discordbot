@@ -76,7 +76,7 @@ class YT:
 				pass
 		if is_link:
 			try:
-				vid = pytube.YouTube(input, use_oath=True)
+				vid = pytube.YouTube(input)
 				return vid, False
 			except:
 				pass
@@ -87,21 +87,14 @@ class YT:
 def download_from_pytube(yt_obj:pytube.YouTube):
 	out_file = None
 	out_file = yt_obj.streams.get_audio_only().download(output_path = 'downloads/')
-	print(f"no audio only source for {yt_obj.title}")
-
-	if out_file == None:
-		out_file = yt_obj.streams.get_lowest_resolution.download(filename = yt_obj.video_id, output_path = 'downloads/')
 
 	new_file = f"downloads/{yt_obj.video_id}.mp3"
 	os.rename(out_file, new_file)
-	print(f"Sucessfully downloaded {yt_obj.title}")
 
 if __name__ == '__main__':
 	yt = YT()
 	vid = pytube.YouTube("https://www.youtube.com/watch?v=N3zvFU49u08", use_oauth=True)
-
-	vid.age_restricted
-	vid.bypass_age_gate()
-	vid.streams.get_audio_only().download()
+	
+	download_from_pytube(vid)
 	
 

@@ -34,11 +34,6 @@ class Play(commands.Cog):
 		yt_obj, is_playlist = self.bot.yt.find_video(arg)
 		if not is_playlist:
 			song = self.bot.new_song(yt_obj)
-			if not song.has_audio_source():
-				await ctx.send(embed=Embed.from_dict({"title": "Play", 
-										 "description": "Some issue with the song. Age restricted. Too based. Who knows. Wont be able to download, sorry."}))
-				return
-
 			if song.length > MAX_SONG_DURATION:
 				await ctx.send(embed=Embed.from_dict({"title": "Play", 
 										 "description": "Song over 10 minutes. To queue longer songs become a supporter by sending Miles-Wright-6 a minimum of $20 on venmo :D"}))

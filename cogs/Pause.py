@@ -25,10 +25,8 @@ class Pause(commands.Cog):
 
 	@commands.command(help="Skip song can also use =s, =next, =n", aliases=["s", "next", "n"])
 	async def skip(self, ctx):
-		self.bot.VC.pause()
 		if self.bot.now_playing == None:
 			await ctx.send(embed=Embed.from_dict({"title": "Skip", "description": "Nothing to skip"}))
 			return
 		await ctx.send(embed=Embed.from_dict({"title": "Skip", "description": f"Skipping [{self.bot.now_playing.title}]({self.bot.now_playing.url})"}))
-		play = self.bot.get_cog("Play")
-		play.play_next(None)
+		self.bot.VC.stop()

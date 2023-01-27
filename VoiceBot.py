@@ -94,6 +94,10 @@ class Song(object):
 		self.yt_obj = yt_obj
 		self.length = yt_obj.length
 		self.current_time = 0
+		self.age_restricted = yt_obj.age_restricted
+		if self.age_restricted:
+			self.yt_obj.use_oauth = True
+			self.yt_obj.bypass_age_gate()
 
 
 	def __repr__(self):
@@ -116,14 +120,9 @@ class Song(object):
 			try:
 				MilesYoutube.download_from_pytube(self.yt_obj)
 			except BaseException as e:
-				print(f"Unable to download video {yt_obj.watch_url}\n {e}")
+				print(f"Unable to download video {self.yt_obj.watch_url}\n {e}\n")
 			VoiceBot.log("Download", self.title, self.length)
 
-	def has_audio_source(self):
-		try:
-			return self.yt_obj.streams.get_audio_only() != None
-		except:
-			return False
 
 class PlaylistObj(object):
 	def __init__(self, yt_obj):
