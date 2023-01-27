@@ -113,9 +113,17 @@ class Song(object):
 
 	def download(self):
 		if not self.is_downloaded():
-			MilesYoutube.download_from_pytube(self.yt_obj)
+			try:
+				MilesYoutube.download_from_pytube(self.yt_obj)
+			except BaseException as e:
+				print(f"Unable to download video {yt_obj.watch_url}\n {e}")
 			VoiceBot.log("Download", self.title, self.length)
 
+	def has_audio_source(self):
+		try:
+			return self.yt_obj.streams.get_audio_only() != None
+		except:
+			return False
 
 class PlaylistObj(object):
 	def __init__(self, yt_obj):
