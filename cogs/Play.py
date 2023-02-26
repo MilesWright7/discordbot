@@ -3,7 +3,7 @@ from discord import Embed
 from MyAudioSource import MyAudioSource
 import utils
 
-MAX_SONG_DURATION = 600 #ten minutes
+MAX_SONG_DURATION = 1200 #twenty minutes
 
 def setup(bot):
 	bot.add_cog(Play(bot))
@@ -49,7 +49,7 @@ class Play(commands.Cog):
 			pl = self.bot.new_playlist(yt_obj)
 			songs = pl.get_song_list()
 			message = ""
-			new_songs = [song for song in songs if not (song.length > MAX_SONG_DURATION) and (song.has_audio_source())]
+			new_songs = [song for song in songs if not (song.length > MAX_SONG_DURATION)]
 			if len(new_songs) != len(songs):
 				await ctx.send(embed=Embed.from_dict({"title": "Play", 
 										 "description": "Some issue with somg of the songs in the playlist. Age restricted. Too based. Who knows. Wont be able to download, sorry. So they are not being added :)"}))
