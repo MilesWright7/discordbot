@@ -1,17 +1,28 @@
-import MilesYoutube
-import discordbot
-
-yt = MilesYoutube.YT()
-search = yt.find_video("goose polyphia")
-link = yt.find_video("https://www.youtube.com/watch?v=lhEpE7_JZ3U")
-print(f"search {search}" )
-print(f"link {link}")
+from tkinter import Y
 
 
-song = discordbot.Song(search)
+class MyClass():
+	def __init__(self, x , y):
+		self.x = x
+		self.y = y
+
+	def __hash__(self):
+		return hash((self.x, self.y))
+
+	def __eq__(self, other):
+		if isinstance(other, self.__class__):
+			return self.x == other.x and self.y == other.y
+		else:
+			return False
 
 
 
-def modify_song(song):
-    song.current_time = 100
 
+a = MyClass(1,2)
+b = MyClass(1,2)
+
+x = set()
+x.add(a)
+x.add(b)
+
+print(x)

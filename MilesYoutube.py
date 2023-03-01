@@ -10,7 +10,6 @@ class YT:
 
 	watch_re = re.compile('watch\\?v=')
 	playlist_re = re.compile('list=')
-	index_re = re.compile('index=')
 	alt_yt_link_re = re.compile('youtu.be/')
 	yt_watch_string = "https://www.youtube.com/watch?v="
 	yt_querry_string = "https://www.youtube.com/results?search_query="
@@ -45,7 +44,6 @@ class YT:
 	def find_video(this, input:str):
 		is_link = False
 		is_playlist = False
-		idx = 1
 
 		# for links of the form youtu.be/<video_id>
 		alt_youtube_link = this.alt_yt_link_re.search(input)
@@ -57,9 +55,6 @@ class YT:
 		playlist_search = this.playlist_re.search(input)
 		if playlist_search:
 			is_playlist = True
-			index_search = this.index_re.search(input)
-			if index_search:
-				idx = int(input[index_search.span()[1]:])
 
 		# for standard youtube.com/watch... links
 		watch_search = this.watch_re.search(input)
@@ -70,18 +65,18 @@ class YT:
 			try:
 				pl = pytube.Playlist(input)
 				if pl:
-					return pl, True
+					return pl.videos
 
 			except:
 				pass
 		if is_link:
 			try:
 				vid = pytube.YouTube(input)
-				return vid, False
+				return [vid]
 			except:
 				pass
 
-		return pytube.YouTube(this.search(input)), False
+		return [pytube.YouTube(this.search(input))]
 
 		
 def download_from_pytube(yt_obj:pytube.YouTube):
@@ -93,8 +88,11 @@ def download_from_pytube(yt_obj:pytube.YouTube):
 
 if __name__ == '__main__':
 	yt = YT()
-	vid = pytube.YouTube("https://www.youtube.com/watch?v=N3zvFU49u08", use_oauth=True)
+	#vid = pytube.YouTube("https://www.youtube.com/watch?v=N3zvFU49u08", use_oauth=True)
+	pl = pytube.Playlist("https://youtube.com/playlist?list=PLTF9eI6zR7Tl3T_mGNNxX3VSP6sXaFlv_")
+
+	print(pl.videos[:10])
 	
-	download_from_pytube(vid)
+	#download_from_pytube(vid)
 	
 

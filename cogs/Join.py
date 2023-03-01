@@ -20,9 +20,10 @@ class Join(commands.Cog):
 			await ctx.send(embed=Embed.from_dict({"title": "Join", "description": "You must be in a voice channel to use this command"}))
 			return
 		self.bot.ensure_player()
-		if self.bot.VC == None:
+		if self.bot.VC == None or not self.bot.VC.is_connected():
 			self.bot.VC = await channel.connect()
 		else:
+			mama = self.bot.VC.voice_clients
 			await self.bot.VC.move_to(channel)
 		await ctx.send(embed=Embed.from_dict({"title": "Join", "description": "Hello"}))
 		self.bot.log("Join", ctx.author.id, ctx.author.name)
