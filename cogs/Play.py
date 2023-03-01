@@ -68,7 +68,9 @@ class Play(commands.Cog):
 	
 	def play_song(self):
 		self.bot.now_playing = self.bot.player.dequeue()
+		self.bot.waiting_for_download = True
 		self.bot.now_playing.download()
+		self.bot.waiting_for_download = False
 		if self.bot.VC == None or not self.bot.VC.is_connected():
 			return
 		self.bot.VC.play(MyAudioSource(self.bot.now_playing, self.bot.playback_speed, self.bot.nightcore), after=self.play_next)
@@ -88,6 +90,8 @@ class Play(commands.Cog):
 			return
 		elif self.bot.player.is_empty():
 			self.bot.now_playing = None
+			return
+		elif self.bot.waiting_for_download:
 			return
 		else:
 			self.bot.now_playing = None

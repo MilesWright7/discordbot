@@ -26,6 +26,7 @@ class VoiceBot(commands.Bot):
 		self.main_ctx = None
 		self.playback_speed = 1
 		self.nightcore = False
+		self.waiting_for_download = False
 
 
 	@staticmethod
