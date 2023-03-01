@@ -24,7 +24,7 @@ class Queue(commands.Cog):
 		if self.bot.playback_speed != 1:
 			playback_string += f"Playback speed: {self.bot.playback_speed * 100:.0f}%"
 		if self.bot.now_playing != None:
-			message += f"Now Playing:\n[{self.bot.now_playing.title}]({self.bot.now_playing.url}) {utils.seconds_to_time(int(self.bot.now_playing.current_time))}/{utils.seconds_to_time(self.bot.now_playing.length / self.bot.VC.source.playback_speed)}\n{playback_string}\n"
+			message += f"Now Playing:\n[{self.bot.now_playing.title}]({self.bot.now_playing.url}) {utils.seconds_to_time(int(self.bot.now_playing.current_time))}/{utils.seconds_to_time(self.bot.now_playing.length)}\n{playback_string}\n"
 
 		if self.bot.player.is_empty() and not self.bot.looping:
 			message += "Queue is empty"
