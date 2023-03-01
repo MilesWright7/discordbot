@@ -38,7 +38,7 @@ class Play(commands.Cog):
 			await ctx.send(embed=Embed.from_dict({"title": "Play", 
 										 "description": "Some error happened. Couldn't find the playlist/song. Sorry"}))
 			return
-					
+		
 		for yt in yt_list:
 			song = self.bot.new_song(yt)
 			if song.length > MAX_SONG_DURATION:
@@ -48,64 +48,22 @@ class Play(commands.Cog):
 					to_long_message_sent = True
 				continue
 
-			self.bot.player.queue(song)
 			message += f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
 			self.bot.log("Play", ctx.author.id, ctx.author.name, song.title, song.length, song.is_downloaded())
-
+	
+			self.bot.player.queue(song)
+			
 		if len(message) > 1500:
 			message = message[: message.find("\n", 1500)]
 			message += "\nAnd more..."
-		if message == "":
-			return
-		await ctx.send(embed=Embed.from_dict({"title": "Play", "description": message}))
+		e = Embed.from_dict({"title": "From Playlist", 
+										 "description": message})
+	
+		await ctx.send(embed=e)
 		if self.bot.VC.is_playing():
 			pass
 		else:
 			self.play_next(None)
-				
-
-
-		#if not is_playlist:
-		#	song = self.bot.new_song(yt_obj)
-		#	if song.length > MAX_SONG_DURATION:
-		#		await ctx.send(embed=Embed.from_dict({"title": "Play", 
-		#								 "description": "Song over 10 minutes. To queue longer songs become a supporter by sending Miles-Wright-6 a minimum of $20 on venmo :D"}))
-		#		return
-
-		#	self.bot.player.queue(song)
-		#	e = Embed.from_dict({"title": "Play",
-		#			"description":f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}"})
-			
-		#	self.bot.log("Play", ctx.author.id, ctx.author.name, song.title, song.length, song.is_downloaded())
-		
-		#else:
-		#	pl = self.bot.new_playlist(yt_obj)
-		#	songs = pl.get_song_list()
-		#	message = ""
-		#	new_songs = [song for song in songs if not (song.length > MAX_SONG_DURATION) and (song.has_audio_source())]
-		#	if len(new_songs) != len(songs):
-		#		await ctx.send(embed=Embed.from_dict({"title": "Play", 
-		#								 "description": "Some issue with somg of the songs in the playlist. Age restricted. Too based. Who knows. Wont be able to download, sorry. So they are not being added :)"}))
-		#	for song in new_songs:
-
-		#		message += f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
-		#		self.bot.log("Play", ctx.author.id, ctx.author.name, song.title, song.length, song.is_downloaded())
-	
-		#	if message == "":
-		#		message = "Doesn't work for auto generated playlists like My Mix or song radio. Sorry :("
-		#	self.bot.player.queue_list(songs)
-			
-		#	if len(message) > 1500:
-		#		message = message[: message.find("\n", 1500)]
-		#		message += "\nAnd more..."
-		#	e = Embed.from_dict({"title": "From Playlist", 
-		#								 "description": message})
-	
-		#await ctx.send(embed=e)
-		#if self.bot.VC.is_playing():
-		#	pass
-		#else:
-		#	self.play_next(None)
 
 	
 	def play_song(self):
