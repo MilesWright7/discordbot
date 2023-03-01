@@ -15,6 +15,7 @@ class Leave(commands.Cog):
 	@commands.command(help="bot leaves")
 	async def leave(self, ctx):
 		try:
+			self.bot.VC.stop()
 			await self.bot.VC.disconnect()
 			self.bot.reset_defaults()
 			handle_downloads_space()
