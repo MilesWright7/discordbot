@@ -5,6 +5,8 @@ import pytube
 import re
 from pytube.innertube import InnerTube
 import pathlib
+import datetime
+from moviepy.video.io.VideoFileClip import VideoFileClip
 
 class YT:
 
@@ -81,18 +83,35 @@ class YT:
 		
 def download_from_pytube(yt_obj:pytube.YouTube):
 	out_file = None
-	out_file = yt_obj.streams.get_audio_only().download(output_path = 'downloads/')
-
+	out_file = yt_obj.streams.get_by_itag(18).download(output_path = 'downloads/')
 	new_file = f"downloads/{yt_obj.video_id}.mp3"
-	os.rename(out_file, new_file)
+
+	convert_to_mp3(out_file, new_file)
+	os.remove(out_file)
+
+
+def convert_to_mp3(mp4_path, mp3_path):
+	clip = VideoFileClip(mp4_path)
+	clip.audio.write_audiofile(mp3_path)
+	clip.close()
+
 
 if __name__ == '__main__':
 	yt = YT()
-	#vid = pytube.YouTube("https://www.youtube.com/watch?v=N3zvFU49u08", use_oauth=True)
-	pl = pytube.Playlist("https://youtube.com/playlist?list=PLTF9eI6zR7Tl3T_mGNNxX3VSP6sXaFlv_")
+	vid = pytube.YouTube("https://www.youtube.com/watch?v=5I-r3Z_tm7I")
+	#pl = pytube.Playlist("https://youtube.com/playlist?list=PLTF9eI6zR7Tl3T_mGNNxX3VSP6sXaFlv_")
 
-	print(pl.videos[:10])
-	
-	#download_from_pytube(vid)
+	#print(pl.videos[:10])
+
+	size_bytes = vid.streams.get_by_itag(18).filesize
+	print(f'File size: {size_bytes} bytes')
+	print(f'Will start the download:')
+
+	time_before = datetime.datetime.utcnow()
+	download_from_pytube(vid)
+
+	download_time = datetime.datetime.utcnow() - time_before
+	print(f'Downloading time: {download_time.total_seconds()} seconds')
+	print(f'Average speed:    {size_bytes/download_time.total_seconds()/1024} kB/s ')
 	
 
