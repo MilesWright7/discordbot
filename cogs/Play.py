@@ -56,7 +56,7 @@ class Play(commands.Cog):
 		if len(message) > 1500:
 			message = message[: message.find("\n", 1500)]
 			message += "\nAnd more..."
-		e = Embed.from_dict({"title": "From Playlist", 
+		e = Embed.from_dict({"title": "Play", 
 										 "description": message})
 	
 		await ctx.send(embed=e)
