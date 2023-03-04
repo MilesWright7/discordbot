@@ -125,6 +125,15 @@ class Song(object):
 			VoiceBot.log("Download", self.title, self.length)
 
 
+	def __eq__(self, other):
+		if not other:
+			return False
+		return self.video_id == other.video_id
+
+	
+	def __ne__(self, other):
+		return not self.__eq__(other)
+
 class PlaylistObj(object):
 	def __init__(self, yt_obj):
 		self.song_list = [Song(x) for x in yt_obj.videos]

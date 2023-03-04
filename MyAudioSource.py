@@ -5,6 +5,7 @@ class MyAudioSource(discord.AudioSource):
 	def __init__(self, song, playbackSpeed = 1, nightcore = False):
 		self.playing_sound = False
 		self.song = song
+		self.sound = None
 		song.current_time = 0
 		self.playback_speed = playbackSpeed
 		if nightcore:
@@ -31,6 +32,8 @@ class MyAudioSource(discord.AudioSource):
 
 	def cleanup(self):
 		self.audio.cleanup()
+		if self.sound:
+			self.sound.cleanup()
 
 
 	def seek(self, seconds):
@@ -44,5 +47,7 @@ class MyAudioSource(discord.AudioSource):
 
 
 	def play_sound(self, sound):
+		if self.sound:
+			self.sound.cleanup()
 		self.sound = discord.FFmpegAudio(sound.location())
 		self.playing_sound = True
