@@ -3,8 +3,8 @@ from discord import Embed
 import subprocess
 
 restart_script = "./start_bot.sh"
-def setup(bot):
-	bot.add_cog(Restart(bot))
+async def setup(bot):
+	await bot.add_cog(Restart(bot))
 
 
 class Restart(commands.Cog):

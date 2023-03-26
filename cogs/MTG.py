@@ -23,8 +23,8 @@ Conditions = ["You lose 6 life.",
 				  "You get an emblem with \"At the beginning of your upkeep, you lose 1 life for each creature you control.\""]
 
 
-def setup(bot):
-	bot.add_cog(MTG(bot))
+async def setup(bot):
+	await bot.add_cog(MTG(bot))
 
 
 class MTG(commands.Cog):

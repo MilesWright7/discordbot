@@ -26,10 +26,10 @@ class Sound(object):
 		return self.name == other.name
 
 
-def setup(bot):
+async def setup(bot):
 	sb = Soundboard(bot)
 	sb.InitSounds()
-	bot.add_cog(sb)
+	await bot.add_cog(sb)
 
 
 class Soundboard(commands.Cog):
@@ -60,7 +60,7 @@ class Soundboard(commands.Cog):
 			await ctx.send(embed=Embed.from_dict({"title":"Soundboard", "description": "Must supply only one sound file"}))
 			return
 
-		if not ctx.message.attachments[0].content_type is 'audio/mpeg':
+		if ctx.message.attachments[0].content_type != 'audio/mpeg':
 			await ctx.send(embed=Embed.from_dict({"title":"Soundboard", "description": "Must supply sound file only\nOnly supports .mp3 files"}))
 			return
 
@@ -70,11 +70,7 @@ class Soundboard(commands.Cog):
 		filename = arg + filename[filename.rindex("."):]
 		await ctx.message.attachments[0].save(sound.location())
 
-
-
-
-
-			
+		
 	@commands.command(help="Lists sounds added to soundboard", aliases=["ls"])
 	async def listsounds(self, ctx):
 		message = ", ".join([x.name for x in self.sounds])
@@ -91,4 +87,3 @@ class Soundboard(commands.Cog):
 		if not arg in self.sounds:
 			await ctx.send(embed=Embed.from_dict({"title":"Soundboard", "description": "I don't have that sound"}))
 			return
-

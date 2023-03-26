@@ -5,8 +5,8 @@ import utils
 
 MAX_SONG_DURATION = 1200 #twenty minutes
 
-def setup(bot):
-	bot.add_cog(Play(bot))
+async def setup(bot):
+	await bot.add_cog(Play(bot))
 
 
 class Play(commands.Cog):
@@ -16,8 +16,10 @@ class Play(commands.Cog):
 
 	@commands.command(help="adds song to queue can also use =p", aliases=["p"])
 	async def play(self, ctx, *, arg = None):
+
+		player = self.bot.players[ctx.guild.id]
 	
-		if not self.bot.VC or not self.bot.VC.is_connected():
+		if not player.VC or not player.VC.is_connected():
 			join = self.bot.get_cog("Join")
 			await join.join(ctx)
 
@@ -44,60 +46,28 @@ class Play(commands.Cog):
 			if song.length > MAX_SONG_DURATION:
 				if not to_long_message_sent:
 					await ctx.send(embed=Embed.from_dict({"title": "Play", 
-										 "description": "[{song.title}]({song.url}) over 20 minutes. To queue longer songs become a supporter by sending Miles-Wright-6 a minimum of $20 on venmo :D"}))
+										 "description": f"{song} over 20 minutes. To queue longer songs become a supporter by sending Miles-Wright-6 a minimum of $20 on venmo :D"}))
 					to_long_message_sent = True
 				continue
 
-			message += f"Added [{song.title}]({song.url}) {utils.seconds_to_time(song.length)}\n"
-			self.bot.log("Play", ctx.author.id, ctx.author.name, song.title, song.length, song.is_downloaded())
+			message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+			self.bot.log("Play", ctx.guild.id, ctx.author.id, ctx.author.name, song.title, song.length, song.is_downloaded())
 	
-			self.bot.player.queue(song)
+			player.queue(song)
 			
 		if len(message) > 1500:
 			message = message[: message.find("\n", 1500)]
 			message += "\nAnd more..."
+
 		e = Embed.from_dict({"title": "Play", 
 										 "description": message})
 	
-		await ctx.send(embed=e)
-		if self.bot.VC.is_playing():
-			pass
-		else:
-			self.play_next(None)
-
-	
-	def play_song(self):
-		self.bot.now_playing = self.bot.player.dequeue()
-		self.bot.waiting_for_download = True
-		self.bot.now_playing.download()
-		self.bot.waiting_for_download = False
-		if self.bot.VC == None or not self.bot.VC.is_connected():
-			return
-		self.bot.VC.play(MyAudioSource(self.bot.now_playing, self.bot.playback_speed, self.bot.nightcore), after=self.play_next)
-		
-
-	def play_next(self, _):
-		if self.bot.player == None:
-			self.bot.now_playing = None
-			return
-
-		if self.bot.looping and self.bot.now_playing != None:
-			self.bot.player.queue(self.bot.now_playing)
-	
-		if self.bot.VC == None:
-			return
-		elif self.bot.VC.is_playing():
-			return
-		elif self.bot.player.is_empty():
-			self.bot.now_playing = None
-			return
-		elif self.bot.waiting_for_download:
-			return
-		else:
-			self.bot.now_playing = None
-			self.play_song()
-
+		if len(message) > 0:
+			await ctx.send(embed=e)
 			
+		player.play_next(None)
+			
+
 	def is_in_channel_with_bot(self, ctx):
 		channel = ctx.author.voice.channel
 		return channel == self.bot.VC.channel

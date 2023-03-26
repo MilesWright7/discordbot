@@ -102,16 +102,17 @@ if __name__ == '__main__':
 	#pl = pytube.Playlist("https://youtube.com/playlist?list=PLTF9eI6zR7Tl3T_mGNNxX3VSP6sXaFlv_")
 
 	#print(pl.videos[:10])
+	print(vid.streams)
+	
+	# size_bytes = vid.streams.get_by_itag(18).filesize
+	# print(f'File size: {size_bytes} bytes')
+	# print(f'Will start the download:')
 
-	size_bytes = vid.streams.get_by_itag(18).filesize
-	print(f'File size: {size_bytes} bytes')
-	print(f'Will start the download:')
+	# time_before = datetime.datetime.utcnow()
+	# download_from_pytube(vid)
 
-	time_before = datetime.datetime.utcnow()
-	download_from_pytube(vid)
-
-	download_time = datetime.datetime.utcnow() - time_before
-	print(f'Downloading time: {download_time.total_seconds()} seconds')
-	print(f'Average speed:    {size_bytes/download_time.total_seconds()/1024} kB/s ')
+	# download_time = datetime.datetime.utcnow() - time_before
+	# print(f'Downloading time: {download_time.total_seconds()} seconds')
+	# print(f'Average speed:    {size_bytes/download_time.total_seconds()/1024} kB/s ')
 	
 

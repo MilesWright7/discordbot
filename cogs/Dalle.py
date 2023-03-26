@@ -6,8 +6,8 @@ import base64
 import io
 
 
-def setup(bot):
-	bot.add_cog(Dalle(bot))
+async def setup(bot):
+	await bot.add_cog(Dalle(bot))
 
 
 class Dalle(commands.Cog):

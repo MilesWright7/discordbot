@@ -2,8 +2,8 @@ from discord.ext import commands
 import random
 
 
-def setup(bot):
-	bot.add_cog(Random(bot))
+async def setup(bot):
+	await bot.add_cog(Random(bot))
 
 
 class Random(commands.Cog):

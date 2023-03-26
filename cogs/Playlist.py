@@ -4,8 +4,8 @@ from discord import Embed
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
 
-def setup(bot):
-	bot.add_cog(Playlist(bot))
+async def setup(bot):
+	await bot.add_cog(Playlist(bot))
 
 
 class Playlist(commands.Cog):
@@ -91,7 +91,7 @@ class Playlist(commands.Cog):
 				song = self.bot.new_song(yt)
 				if not song in self.playlists[playlist_name]:
 					self.playlists[playlist_name].append(song)
-					message += f"[{song.title}]({song.url})\n"
+					message += f"{song}\n"
 
 			if not message:
 				e=Embed.from_dict({
@@ -161,7 +161,7 @@ class Playlist(commands.Cog):
 					self.playlists[playlist_name].remove(song)
 					e=Embed.from_dict({
 						"title":"Playlist",
-						"description":f"Removed [{song.title}]({song.url}) from **{playlist_name}**",
+						"description":f"Removed {song} from **{playlist_name}**",
 					})
 					await ctx.send(embed=e)
 					self.save_playlists()
@@ -188,7 +188,7 @@ class Playlist(commands.Cog):
 				return
 
 			songs = self.playlists[playlist_name]
-			message = "\n".join([f"{idx}. [{song.title}]({song.url})" for idx, song in enumerate(songs, 1)])
+			message = "\n".join([f"{idx}. {song}" for idx, song in enumerate(songs, 1)])
 			e=Embed.from_dict({
 				"title":"Playlist",
 				"description":f"Songs for playlist **{playlist_name}**\n{message}",
@@ -217,23 +217,20 @@ class Playlist(commands.Cog):
 				return
 
 			else:
-				if not self.bot.VC or not self.bot.VC.is_connected():
+				player = self.bot.players[ctx.guild.id]
+				if not player.VC or not player.VC.is_connected():
 					join = self.bot.get_cog("Join")
 					await join.join(ctx)
 
 				songs = self.playlists[playlist_name]
-				self.bot.player.queue_list(songs)
+				player.queue_list(songs)
 				e=Embed.from_dict({
 					"title":"Playlist",
 					"description":f"Added songs from **{playlist_name}** to queue",
 					})
 				await ctx.send(embed=e)
 
-				if self.bot.VC.is_playing():
-					pass
-				else:
-					play = self.bot.get_cog("Play")
-					play.play_next(None)
+				player.play_next(None)
 
 		# Invalid command
 		else:

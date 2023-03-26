@@ -3,8 +3,8 @@ from discord import Embed
 from SpaceManagement import handle_downloads_space
 
 
-def setup(bot):
-	bot.add_cog(Leave(bot))
+async def setup(bot):
+	await bot.add_cog(Leave(bot))
 
 
 class Leave(commands.Cog):
@@ -14,13 +14,14 @@ class Leave(commands.Cog):
 
 	@commands.command(help="bot leaves")
 	async def leave(self, ctx):
+		player = self.bot.players[ctx.guild.id]
 		try:
-			self.bot.VC.stop()
-			await self.bot.VC.disconnect()
-			self.bot.reset_defaults()
+			player.stop()
+			await player.disconnect()
+			player.reset()
 			handle_downloads_space()
 			await ctx.send(embed=Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
-			self.bot.log("Leave", ctx.author.id, ctx.author.name)
+			self.bot.log("Leave", ctx.guild.id, ctx.author.id, ctx.author.name)
 		
 		except:
 			await ctx.send(embed=Embed.from_dict({"title": "Leave", "description": "I'm already gone"}))

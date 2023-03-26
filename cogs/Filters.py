@@ -2,11 +2,11 @@ from discord.ext import commands
 from discord import Embed
 
 
-def setup(bot):
-	bot.add_cog(Seek(bot))
+async def setup(bot):
+	await bot.add_cog(Filters(bot))
 
 
-class Seek(commands.Cog):
+class Filters(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
@@ -23,14 +23,16 @@ class Seek(commands.Cog):
 			await ctx.send(embed=Embed.from_dict({"title": "Playback Speed", "description": "Invalid Input! Input must be a number between 0.5 and 2.0"}))
 			return
 		
-		self.bot.playback_speed = as_float
+		player = self.bot.players[ctx.guild.id]
+		player.playback_speed = as_float
 	
 		await ctx.send(embed=Embed.from_dict({"title": "Playback Speed", "description": f"Set playback speed to {as_float * 100:.0f}%\nWill take effect next song that starts"}))
 
 
 	@commands.command(help="Toggle nightcore filter")
 	async def nightcore(self, ctx):
-		self.bot.nightcore = not self.bot.nightcore
+		player = self.bot.players[ctx.guild.id]
+		player.nightcore = not player.nightcore
 		
-		self.bot.playback_speed = 1.15 if self.bot.nightcore else 1
-		await ctx.send(embed=Embed.from_dict({"title": "Nightcore", "description": f"Toggled {'On' if self.bot.nightcore else 'Off'}"}))
+		player.playback_speed = 1.15 if player.nightcore else 1
+		await ctx.send(embed=Embed.from_dict({"title": "Nightcore", "description": f"Toggled {'On' if player.nightcore else 'Off'}"}))
