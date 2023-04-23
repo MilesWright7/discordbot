@@ -26,17 +26,29 @@ class Song(object):
 
 	@property
 	def url(self):
-		return self.yt_obj.watch_url
+		try:
+			return self.yt_obj.watch_url
+		except:
+			stream = self.yt_obj.streams.first()
+			return self.yt_obj.watch_url
 
 	
 	@property
 	def length(self):
-		return self.yt_obj.length
+		try:
+			return self.yt_obj.length
+		except:
+			stream = self.yt_obj.streams.first()
+			return self.yt_obj.length
 
 	
 	@property
 	def video_id(self):
-		return self.yt_obj.video_id
+		try:
+			return self.yt_obj.video_id
+		except:
+			stream = self.yt_obj.streams.first()
+			return self.yt_obj.video_id
 
 
 	def location(self):
