@@ -29,7 +29,7 @@ ydl_opts = {
 	'noplaylist': True,
     'logger': MyLogger()
 }
-watch_re = re.compile('watch\\?v=')
+watch_re = re.compile('watch\?v=')
 playlist_re = re.compile('playlist\\?list=')
 alt_yt_link_re = re.compile('youtu.be/')
 yt_watch_string = "https://www.youtube.com/watch?v="
@@ -60,13 +60,14 @@ def find_video(input:str):
 		alt_youtube_link = alt_yt_link_re.search(input)
 		watch_link = watch_re.search(input)
 		if alt_youtube_link or watch_link:
-			return (ydl.extract_info(input, download=False, process=False),)
+			video_id = ( input.partition('youtu.be/') if alt_youtube_link else input.partition('watch?v='))[2][:11]
+			return (ydl.extract_info(yt_watch_string + video_id, download=False, process=False),)
 
 		# for playlist links
 		playlist_search = playlist_re.search(input)
 		if playlist_search:
 			info = ydl.extract_info(input, download=False, process=False)
-			return info['entries']
+			return list(info['entries'])
 		
 		return (ydl.extract_info(search(input), download=False, process=False),)
 
@@ -94,7 +95,7 @@ def convert_to_mp3(mp4_path, mp3_path):
 
 if __name__ == '__main__':
 	#vid = yt.search('nightcore blackout')
-	print(playlist_re.search('https://www.youtube.com/playlist?list=PLDCF162D5581F9725'))
+	print(find_video('https://www.youtube.com/watch?v=X-1SbC14LZ4'))
 	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
 	#print(info.keys())
 	#print(info)

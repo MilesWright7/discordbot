@@ -17,7 +17,10 @@ class Song(object):
 
 	@property
 	def url(self):
-		return self.info['webpage_url']
+		try:
+			return self.info['url']
+		except:
+			return self.info['webpage_url']
 	
 
 	@property
