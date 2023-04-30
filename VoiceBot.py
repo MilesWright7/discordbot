@@ -31,7 +31,7 @@ class VoiceBot(commands.Bot):
 	async def on_ready(self):
 		await self.init()
 		await self.change_presence(status=discord.Status.online, activity=discord.Game("@Miles if I break"));
-		logging.debug("Voice bot online!")
+		logging.info("Voice bot online!")
 
 
 	async def on_guild_join(self, guild):
