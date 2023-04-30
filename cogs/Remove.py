@@ -11,7 +11,7 @@ class Remove(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="Removes songs at specified indexes in the queue")
+	@commands.command(help="Removes songs at specified indexes in the queue can also use =rm", aliases=["rm"])
 	async def remove(self, ctx, index):
 		
 		player = self.bot.players[ctx.guild.id]

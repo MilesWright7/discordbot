@@ -23,7 +23,7 @@ class Player(object):
 
 	@property
 	def length(self):
-		return len(self.queue)
+		return len(self.que)
 
 
 	async def connect(self, channel):
