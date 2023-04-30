@@ -8,7 +8,7 @@ import utils
 import asyncio
 from SpaceManagement import handle_downloads_space
 import random
-
+discord.voice_client.VoiceClient
 class Player(object):
 	def __init__(self):
 		self.VC = None

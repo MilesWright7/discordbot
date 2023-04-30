@@ -1,5 +1,6 @@
 from discord.ext import commands
 from discord import Embed
+import MilesYoutube
 
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
@@ -20,7 +21,7 @@ class Playlist(commands.Cog):
 			for entry in f:
 				playlist = entry.split(",")
 				title = playlist.pop(0)
-				self.playlists[title] = [self.bot.new_song(self.bot.yt.find_video(self.create_youtube_link(song))[0]) for song in playlist]
+				self.playlists[title] = [self.bot.new_song(MilesYoutube.find_video(self.create_youtube_link(song))[0]) for song in playlist]
 
 
 	def save_playlists(self):
@@ -85,7 +86,7 @@ class Playlist(commands.Cog):
 			if not playlist_name in self.playlists:
 				self.playlists[playlist_name] = []
 				
-			yt_list = self.bot.yt.find_video(song)
+			yt_list = MilesYoutube.find_video(song)
 			message = ""
 			for yt in yt_list:
 				song = self.bot.new_song(yt)
@@ -139,7 +140,7 @@ class Playlist(commands.Cog):
 				return
 
 			
-			yt_list = self.bot.yt.find_video(song)
+			yt_list = MilesYoutube.find_video(song)
 			if len(yt_list) > 1:
 				e=Embed.from_dict({
 					"title":"Playlist",

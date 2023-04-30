@@ -6,7 +6,6 @@ Authored by Miles Wright
 import discord
 import os
 from dotenv import load_dotenv
-import MilesYoutube
 import logging
 from discord.ext import commands
 from Player import Player
@@ -16,7 +15,6 @@ from Song import Song
 class VoiceBot(commands.Bot):
 	def __init__(self):
 		super().__init__(command_prefix="=", case_insensitive=True, intents=discord.Intents().all())
-		self.yt = MilesYoutube.YT()
 		self.players = {}
 
 
@@ -33,7 +31,7 @@ class VoiceBot(commands.Bot):
 	async def on_ready(self):
 		await self.init()
 		await self.change_presence(status=discord.Status.online, activity=discord.Game("@Miles if I break"));
-		logging.info("Voice bot online!")
+		logging.debug("Voice bot online!")
 
 
 	async def on_guild_join(self, guild):
@@ -46,14 +44,14 @@ class VoiceBot(commands.Bot):
 		extensions = os.listdir(filename)
 		self.players = self.create_players()
 
-		logging.info('Started loading cogs ...')
+		logging.debug('Started loading cogs ...')
 		for file in extensions:
 			if file.startswith('__'):
 				pass
 			else:
 				cog = file.split('.')[0]
 				await self.load_extension(f'cogs.{cog}')
-		logging.info('Successfully loaded all cogs!')
+		logging.debug('Successfully loaded all cogs!')
 
 
 	@staticmethod
@@ -71,7 +69,7 @@ class VoiceBot(commands.Bot):
 
 def main():
 	
-	logging.basicConfig(filename="log.txt", level=logging.DEBUG,
+	logging.basicConfig(filename="log.txt", level=logging.INFO,
 					format="%(asctime)s %(message)s",
 					datefmt='%Y-%m-%d %H:%M:%S')
 	

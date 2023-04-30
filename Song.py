@@ -1,54 +1,33 @@
 
-import pytube	
 import MilesYoutube
 import os
 
 class Song(object):
 	folder = 'downloads/'
 
-	def __init__(self, yt_obj : pytube.YouTube):
-		self.yt_obj = yt_obj
+	def __init__(self, info):
+		self.info = info
 		self.current_time = 0
-		self.age_restricted = yt_obj.age_restricted
-		if self.age_restricted:
-			self.yt_obj.use_oauth = True
-			self.yt_obj.bypass_age_gate()
 
 
 	@property
 	def title(self):
-		try:
-			return self.yt_obj.title
-		except:
-			stream = self.yt_obj.streams.first()
-			return self.yt_obj.title
+		return self.info['title']
 
 
 	@property
 	def url(self):
-		try:
-			return self.yt_obj.watch_url
-		except:
-			stream = self.yt_obj.streams.first()
-			return self.yt_obj.watch_url
-
+		return self.info['webpage_url']
 	
+
 	@property
 	def length(self):
-		try:
-			return self.yt_obj.length
-		except:
-			stream = self.yt_obj.streams.first()
-			return self.yt_obj.length
+		return self.info['duration']
 
 	
 	@property
 	def video_id(self):
-		try:
-			return self.yt_obj.video_id
-		except:
-			stream = self.yt_obj.streams.first()
-			return self.yt_obj.video_id
+		return self.info['id']
 
 
 	def location(self):
@@ -65,10 +44,9 @@ class Song(object):
 	def download(self):
 		if not self.is_downloaded():
 			try:
-				MilesYoutube.download_from_pytube(self.yt_obj)
+				MilesYoutube.download(self.url)
 			except BaseException as e:
 				print(f"Unable to download video {self.url}\n {e}\n")
-			#VoiceBot.log("Download", self.title, self.length)
 
 
 	def __eq__(self, other):
