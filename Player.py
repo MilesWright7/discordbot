@@ -18,6 +18,7 @@ class Player(object):
 		self.main_ctx : Optional[discord.ext.commands.Context] = None
 		self.playback_speed = 1
 		self.nightcore = False
+		self.bassboost = False
 		self.waiting_for_download = False
 
 
@@ -152,7 +153,7 @@ class Player(object):
 		self.waiting_for_download = False
 		if self.VC == None or not self.VC.is_connected():
 			return
-		self.VC.play(MyAudioSource(self.now_playing, self.playback_speed, self.nightcore), after=self.play_next)
+		self.VC.play(MyAudioSource(self.now_playing, self.playback_speed, self.nightcore, self.bassboost), after=self.play_next)
 		
 
 	def play_next(self, _):

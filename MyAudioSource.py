@@ -2,7 +2,7 @@ import discord
 
 
 class MyAudioSource(discord.AudioSource):
-	def __init__(self, song, playbackSpeed = 1, nightcore = False):
+	def __init__(self, song, playbackSpeed = 1, nightcore = False, bassboost = False):
 		self.playing_sound = False
 		self.song = song
 		self.sound = None
@@ -10,6 +10,8 @@ class MyAudioSource(discord.AudioSource):
 		self.playback_speed = playbackSpeed
 		if nightcore:
 			self.options = "-filter_complex [0:a:0]asetrate=1.15*44.1k,aresample=resampler=soxr:precision=24:osf=s32:tsf=s32p:osr=44.1k"
+		elif bassboost:
+			self.options = "-filter:a \"firequalizer=gain_entry='entry(0,20);entry(250,10);entry(1000,0)'\""
 		elif playbackSpeed == 1:
 			self.options = None
 		else:

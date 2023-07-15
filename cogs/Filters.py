@@ -29,10 +29,18 @@ class Filters(commands.Cog):
 		await ctx.send(embed=Embed.from_dict({"title": "Playback Speed", "description": f"Set playback speed to {as_float * 100:.0f}%\nWill take effect next song that starts"}))
 
 
-	@commands.command(help="Toggle nightcore filter")
+	@commands.command(help="Toggle nightcore filter", aliases=["nc"])
 	async def nightcore(self, ctx):
 		player = self.bot.players[ctx.guild.id]
 		player.nightcore = not player.nightcore
 		
 		player.playback_speed = 1.15 if player.nightcore else 1
 		await ctx.send(embed=Embed.from_dict({"title": "Nightcore", "description": f"Toggled {'On' if player.nightcore else 'Off'}"}))
+
+		
+	@commands.command(help="Toggle bassboost filter", aliases=["bb"])
+	async def bassboost(self, ctx):
+		player = self.bot.players[ctx.guild.id]
+		player.bassboost = not player.bassboost
+		
+		await ctx.send(embed=Embed.from_dict({"title": "Bassboost", "description": f"Toggled {'On' if player.bassboost else 'Off'}"}))
