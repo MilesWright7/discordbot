@@ -38,7 +38,7 @@ async def start_spitroast_pinger(bot):
 	# The file token.json stores the user's access and refresh tokens, and is
 	# created automatically when the authorization flow completes for the first
 	# time.
-	
+	oldId = ""
 	while(RUN_THIS):
 		if os.path.exists('token.json'):
 			creds = Credentials.from_authorized_user_file('token.json', SCOPES)
@@ -59,7 +59,6 @@ async def start_spitroast_pinger(bot):
 
 			# Call the Sheets API
 			service = build('sheets', 'v4', credentials=creds)
-			oldId = ""
 			# loop this shit to update every hour and notify bullshit andys
 			sheet = service.spreadsheets()
 			result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
