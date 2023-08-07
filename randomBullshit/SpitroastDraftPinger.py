@@ -72,7 +72,7 @@ async def start_spitroast_pinger(bot):
 		except HttpError as err:
 			print(err)
 		
-		await asyncio.sleep(3600)
+		await asyncio.sleep(300)
 
 async def send_nudes(userId, channel : discord.channel.TextChannel):
 	await channel.send(f"<@{userId}> its your turn to pick now bruv. https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900")
