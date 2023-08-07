@@ -66,6 +66,7 @@ async def start_spitroast_pinger(bot):
 			values = result.get('values', [])
 			userId = PLAYERS_DICT[values[0][0]]
 			if oldId != userId:
+				oldId = userId
 				await send_nudes(userId, channel)
 
 		except HttpError as err:
