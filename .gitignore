@@ -9,3 +9,5 @@ __pycache__/
 .vs
 sounds.txt
 playlists.csv
+credentials.json
+token.json
