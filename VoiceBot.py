@@ -11,6 +11,7 @@ from discord.ext import commands
 from Player import Player
 from Song import Song
 from randomBullshit.SpitroastDraftPinger import start_spitroast_pinger
+import asyncio
 
 
 class VoiceBot(commands.Bot):
@@ -33,7 +34,7 @@ class VoiceBot(commands.Bot):
 		await self.init()
 		await self.change_presence(status=discord.Status.online, activity=discord.Game("@Miles if I break"));
 		logging.info("Voice bot online!")
-		await start_spitroast_pinger(self)
+		await asyncio.create_task(start_spitroast_pinger(self))
 
 
 	async def on_guild_join(self, guild):
