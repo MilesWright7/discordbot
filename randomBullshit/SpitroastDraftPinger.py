@@ -39,28 +39,28 @@ async def start_spitroast_pinger(bot):
 	# created automatically when the authorization flow completes for the first
 	# time.
 	oldId = ""
+	channel = bot.get_channel(CHANNEL_TO_SEND)
+	if os.path.exists('token.json'):
+		creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+	# If there are no (valid) credentials available, let the user log in.
+	if not creds or not creds.valid:
+		if creds and creds.expired and creds.refresh_token:
+			creds.refresh(Request())
+		else:
+			flow = InstalledAppFlow.from_client_secrets_file(
+					'credentials.json', SCOPES)
+			creds = flow.run_local_server(port=0)
+	# Save the credentials for the next run
+	with open('token.json', 'w') as token:
+		token.write(creds.to_json())
+
+
+	# Call the Sheets API
+	service = build('sheets', 'v4', credentials=creds)
+	# loop this shit to update every hour and notify bullshit andys
+	sheet = service.spreadsheets()
 	while(RUN_THIS):
 		try:
-			if os.path.exists('token.json'):
-				creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-			# If there are no (valid) credentials available, let the user log in.
-			if not creds or not creds.valid:
-				if creds and creds.expired and creds.refresh_token:
-					creds.refresh(Request())
-				else:
-					flow = InstalledAppFlow.from_client_secrets_file(
-						'credentials.json', SCOPES)
-					creds = flow.run_local_server(port=0)
-				# Save the credentials for the next run
-				with open('token.json', 'w') as token:
-					token.write(creds.to_json())
-
-			channel = bot.get_channel(CHANNEL_TO_SEND)
-
-			# Call the Sheets API
-			service = build('sheets', 'v4', credentials=creds)
-			# loop this shit to update every hour and notify bullshit andys
-			sheet = service.spreadsheets()
 			result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
 								range=SAMPLE_RANGE_NAME).execute()
 			values = result.get('values', [])
