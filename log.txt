@@ -1,0 +1,1257 @@
+2022-10-02 15:30:18 Started loading cogs ...
+2022-10-02 15:30:18 Successfully loaded all cogs!
+2022-10-02 15:30:23 Join 218920440297553920
+2022-10-02 15:31:04 Started loading cogs ...
+2022-10-02 15:31:04 Successfully loaded all cogs!
+2022-10-02 15:31:46 Join 218920440297553920
+2022-10-02 15:32:03 Join 218920440297553920
+2022-10-02 15:34:32 Started loading cogs ...
+2022-10-02 15:34:32 Successfully loaded all cogs!
+2022-10-02 15:34:32 Voice bot online!
+2022-10-02 15:34:37 Join 218920440297553920
+2022-10-02 15:34:37 Leave 218920440297553920
+2022-10-02 15:34:45 Join 218920440297553920
+2022-10-02 15:34:47 Leave 218920440297553920
+2022-10-02 15:55:09 Started loading cogs ...
+2022-10-02 15:55:09 Successfully loaded all cogs!
+2022-10-02 15:55:09 Voice bot online!
+2022-10-02 15:55:19 Join 218920440297553920
+2022-10-02 15:56:08 Started loading cogs ...
+2022-10-02 15:56:08 Successfully loaded all cogs!
+2022-10-02 15:56:08 Voice bot online!
+2022-10-02 15:56:12 Join 218920440297553920
+2022-10-02 15:58:42 Started loading cogs ...
+2022-10-02 15:58:42 Successfully loaded all cogs!
+2022-10-02 15:58:42 Voice bot online!
+2022-10-02 15:58:52 Join 218920440297553920
+2022-10-02 15:58:53 Play 218920440297553920 WAR - Low Rider (Official Video) [Remastered in 4K] 220
+2022-10-02 15:59:37 Started loading cogs ...
+2022-10-02 15:59:37 Successfully loaded all cogs!
+2022-10-02 15:59:37 Voice bot online!
+2022-10-02 15:59:42 Join 218920440297553920
+2022-10-02 15:59:43 Play 218920440297553920 War - Low Rider 194
+2022-10-02 16:00:27 Leave 218920440297553920
+2022-10-02 16:00:33 Join 218920440297553920
+2022-10-02 16:00:34 Play 218920440297553920 WAR - Low Rider (Official Video) [Remastered in 4K] 220
+2022-10-02 16:01:25 Play 218920440297553920 Nightcore-Day n Nite 164
+2022-10-02 16:05:27 Started loading cogs ...
+2022-10-02 16:05:27 Successfully loaded all cogs!
+2022-10-02 16:05:27 Voice bot online!
+2022-10-02 16:05:32 Join 218920440297553920
+2022-10-02 16:05:34 Play 218920440297553920 Nightcore-Day n Nite 164 False
+2022-10-02 16:06:15 Started loading cogs ...
+2022-10-02 16:06:15 Successfully loaded all cogs!
+2022-10-02 16:06:15 Voice bot online!
+2022-10-02 16:06:30 Started loading cogs ...
+2022-10-02 16:06:30 Successfully loaded all cogs!
+2022-10-02 16:06:30 Voice bot online!
+2022-10-02 16:06:34 Join 218920440297553920
+2022-10-02 16:06:35 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:06:38 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:11:11 Started loading cogs ...
+2022-10-02 16:11:11 Successfully loaded all cogs!
+2022-10-02 16:11:11 Voice bot online!
+2022-10-02 16:11:16 Join 218920440297553920
+2022-10-02 16:11:17 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:11:18 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:17:50 Started loading cogs ...
+2022-10-02 16:17:50 Successfully loaded all cogs!
+2022-10-02 16:17:50 Voice bot online!
+2022-10-02 16:17:58 Join 218920440297553920
+2022-10-02 16:17:59 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:18:00 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:22:06 Started loading cogs ...
+2022-10-02 16:22:06 Successfully loaded all cogs!
+2022-10-02 16:22:06 Voice bot online!
+2022-10-02 16:22:17 Join 218920440297553920
+2022-10-02 16:22:18 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:22:19 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:25:10 Started loading cogs ...
+2022-10-02 16:25:10 Successfully loaded all cogs!
+2022-10-02 16:25:10 Voice bot online!
+2022-10-02 16:25:14 Join 218920440297553920
+2022-10-02 16:25:15 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:25:23 Leave 218920440297553920
+2022-10-02 16:25:29 Join 218920440297553920
+2022-10-02 16:25:30 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:25:33 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:27:03 Started loading cogs ...
+2022-10-02 16:27:03 Successfully loaded all cogs!
+2022-10-02 16:27:03 Voice bot online!
+2022-10-02 16:27:08 Join 218920440297553920
+2022-10-02 16:27:09 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:27:27 Play 218920440297553920 Nightcore - Day 'n' Night (vs. Crookers) 139 False
+2022-10-02 16:31:03 Started loading cogs ...
+2022-10-02 16:31:03 Successfully loaded all cogs!
+2022-10-02 16:31:03 Voice bot online!
+2022-10-02 16:31:14 Join 218920440297553920
+2022-10-02 16:31:15 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:31:24 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 16:34:27 Play 218920440297553920 Let's Get It On 291 False
+2022-10-02 16:34:30 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 False
+2022-10-02 16:36:51 Download Let's Get It On 291
+2022-10-02 16:41:44 Download Britney Spears - Toxic (Official HD Video) 212
+2022-10-02 16:59:51 Started loading cogs ...
+2022-10-02 16:59:51 Successfully loaded all cogs!
+2022-10-02 16:59:51 Voice bot online!
+2022-10-02 16:59:59 Join 218920440297553920
+2022-10-02 17:00:03 Play 218920440297553920 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-10-02 17:00:08 Play 218920440297553920 Nightcore-Day n Nite 164 True
+2022-10-02 17:00:10 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 True
+2022-10-02 17:02:58 Started loading cogs ...
+2022-10-02 17:02:58 Successfully loaded all cogs!
+2022-10-02 17:02:58 Voice bot online!
+2022-10-02 17:03:09 Join 218920440297553920
+2022-10-02 17:03:10 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 True
+2022-10-02 17:03:13 Play 218920440297553920 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-10-02 17:03:15 Play 218920440297553920 Kid Cudi - Day 'N' Nite (Official Music Video) 187 False
+2022-10-02 17:04:13 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 True
+2022-10-02 17:05:36 Started loading cogs ...
+2022-10-02 17:05:36 Successfully loaded all cogs!
+2022-10-02 17:05:36 Voice bot online!
+2022-10-02 17:05:48 Join 218920440297553920
+2022-10-02 17:05:49 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 True
+2022-10-02 17:12:33 Started loading cogs ...
+2022-10-02 17:12:33 Successfully loaded all cogs!
+2022-10-02 17:12:33 Voice bot online!
+2022-10-02 17:12:38 Join 218920440297553920
+2022-10-02 17:12:40 Play 218920440297553920 Britney Spears - Toxic (Official HD Video) 212 True
+2022-10-02 17:12:42 Play 218920440297553920 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-10-02 17:29:08 Started loading cogs ...
+2022-10-02 17:29:08 Successfully loaded all cogs!
+2022-10-02 17:29:08 Voice bot online!
+2022-10-02 17:29:20 Join 218920440297553920 Miles
+2022-10-02 17:29:21 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-10-02 17:29:47 Play 218920440297553920 Miles Nightcore-Day n Nite 164 True
+2022-10-02 17:30:58 Started loading cogs ...
+2022-10-02 17:30:58 Successfully loaded all cogs!
+2022-10-02 17:30:58 Voice bot online!
+2022-10-02 17:31:07 Join 218920440297553920 Miles
+2022-10-02 17:31:08 Play 218920440297553920 Miles Nightcore-Day n Nite 164 True
+2022-10-02 17:31:29 Play 218920440297553920 Miles Nightcore-Day n Nite 164 True
+2022-10-02 17:42:15 Started loading cogs ...
+2022-10-02 17:42:15 Successfully loaded all cogs!
+2022-10-02 17:42:15 Voice bot online!
+2022-10-02 17:42:27 Join 218920440297553920 Miles
+2022-10-02 17:42:28 Play 218920440297553920 Miles Nightcore-Day n Nite 164 True
+2022-11-01 20:13:49 Started loading cogs ...
+2022-11-01 20:13:49 Successfully loaded all cogs!
+2022-11-01 20:13:49 Voice bot online!
+2022-11-01 20:14:28 Join 218920440297553920 Miles
+2022-11-01 20:14:33 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-11-01 20:16:01 Started loading cogs ...
+2022-11-01 20:16:01 Successfully loaded all cogs!
+2022-11-01 20:16:01 Voice bot online!
+2022-11-01 20:16:09 Join 218920440297553920 Miles
+2022-11-01 20:16:13 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-11-01 20:16:39 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2022-11-01 20:17:23 Started loading cogs ...
+2022-11-01 20:17:23 Successfully loaded all cogs!
+2022-11-01 20:17:23 Voice bot online!
+2022-11-01 20:17:36 Join 218920440297553920 Miles
+2022-11-01 20:17:39 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-26 18:44:56 Started loading cogs ...
+2023-01-26 18:44:56 Successfully loaded all cogs!
+2023-01-26 18:44:56 Voice bot online!
+2023-01-26 18:45:05 Join 218920440297553920 Miles
+2023-01-26 18:45:05 Play 218920440297553920 Miles Fuck A Dude 149 False
+2023-01-26 18:45:07 Download Fuck A Dude 149
+2023-01-26 18:45:46 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-26 19:26:33 Started loading cogs ...
+2023-01-26 19:26:33 Successfully loaded all cogs!
+2023-01-26 19:26:33 Voice bot online!
+2023-01-26 19:26:40 Join 218920440297553920 Miles
+2023-01-26 19:28:57 Started loading cogs ...
+2023-01-26 19:28:57 Successfully loaded all cogs!
+2023-01-26 19:28:57 Voice bot online!
+2023-01-26 19:29:03 Join 218920440297553920 Miles
+2023-01-26 19:29:38 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-26 19:30:31 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-26 19:30:42 Leave 218920440297553920 Miles
+2023-01-27 00:32:24 Started loading cogs ...
+2023-01-27 00:32:25 Successfully loaded all cogs!
+2023-01-27 00:32:25 Voice bot online!
+2023-01-27 00:32:31 Join 218920440297553920 Miles
+2023-01-27 00:34:42 Started loading cogs ...
+2023-01-27 00:34:42 Successfully loaded all cogs!
+2023-01-27 00:34:42 Voice bot online!
+2023-01-27 00:34:47 Join 218920440297553920 Miles
+2023-01-27 00:34:51 Play 218920440297553920 Miles Fuck A Dude 149 False
+2023-01-27 00:36:36 Started loading cogs ...
+2023-01-27 00:36:36 Successfully loaded all cogs!
+2023-01-27 00:36:36 Voice bot online!
+2023-01-27 00:36:43 Join 218920440297553920 Miles
+2023-01-27 00:36:47 Play 218920440297553920 Miles Fuck A Dude 149 False
+2023-01-27 00:36:47 Download Fuck A Dude 149
+2023-01-27 00:39:01 Started loading cogs ...
+2023-01-27 00:39:01 Successfully loaded all cogs!
+2023-01-27 00:39:01 Voice bot online!
+2023-01-27 00:39:05 Join 218920440297553920 Miles
+2023-01-27 00:44:38 Started loading cogs ...
+2023-01-27 00:44:38 Successfully loaded all cogs!
+2023-01-27 00:44:38 Voice bot online!
+2023-01-27 00:44:44 Join 218920440297553920 Miles
+2023-01-27 01:09:18 Started loading cogs ...
+2023-01-27 01:09:18 Successfully loaded all cogs!
+2023-01-27 01:09:18 Voice bot online!
+2023-01-27 01:09:25 Join 218920440297553920 Miles
+2023-01-27 01:09:48 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-27 01:13:56 Started loading cogs ...
+2023-01-27 01:13:56 Successfully loaded all cogs!
+2023-01-27 01:13:56 Voice bot online!
+2023-01-27 01:14:00 Join 218920440297553920 Miles
+2023-01-27 01:16:48 Started loading cogs ...
+2023-01-27 01:16:48 Successfully loaded all cogs!
+2023-01-27 01:16:48 Voice bot online!
+2023-01-27 01:16:55 Join 218920440297553920 Miles
+2023-01-27 01:17:27 Started loading cogs ...
+2023-01-27 01:17:27 Successfully loaded all cogs!
+2023-01-27 01:17:27 Voice bot online!
+2023-01-27 01:17:31 Join 218920440297553920 Miles
+2023-01-27 01:17:55 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-01-27 01:19:21 Started loading cogs ...
+2023-01-27 01:19:21 Successfully loaded all cogs!
+2023-01-27 01:19:21 Voice bot online!
+2023-01-27 01:19:27 Join 218920440297553920 Miles
+2023-01-27 01:19:52 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-27 01:20:22 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-01-27 01:22:26 Started loading cogs ...
+2023-01-27 01:22:26 Successfully loaded all cogs!
+2023-01-27 01:22:26 Voice bot online!
+2023-01-27 01:22:30 Join 218920440297553920 Miles
+2023-01-27 01:22:34 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-01-27 01:22:42 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-01-27 01:30:49 Started loading cogs ...
+2023-01-27 01:30:49 Successfully loaded all cogs!
+2023-01-27 01:30:49 Voice bot online!
+2023-01-27 01:31:01 Join 218920440297553920 Miles
+2023-01-27 01:31:03 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 False
+2023-01-27 01:31:25 Download WAR - Low Rider (Official Video) [Remastered in 4K] 220
+2023-01-27 01:31:51 Play 218920440297553920 Miles Fuck A Dude 149 False
+2023-01-27 01:32:13 Download Fuck A Dude 149
+2023-01-27 01:43:26 Started loading cogs ...
+2023-01-27 01:43:26 Successfully loaded all cogs!
+2023-01-27 01:43:26 Voice bot online!
+2023-01-27 01:43:41 Join 218920440297553920 Miles
+2023-01-27 01:43:45 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 False
+2023-01-27 01:44:07 Download WAR - Low Rider (Official Video) [Remastered in 4K] 220
+2023-01-27 01:44:09 Play 218920440297553920 Miles Fuck A Dude 149 False
+2023-01-27 01:44:42 Download Fuck A Dude 149
+2023-02-28 21:01:10 Started loading cogs ...
+2023-02-28 21:01:10 Successfully loaded all cogs!
+2023-02-28 21:01:10 Voice bot online!
+2023-02-28 21:01:50 Started loading cogs ...
+2023-02-28 21:01:50 Successfully loaded all cogs!
+2023-02-28 21:01:50 Voice bot online!
+2023-02-28 21:01:56 Join 218920440297553920 Miles
+2023-02-28 21:01:58 Play 218920440297553920 Miles Nightcore - Blackout 163 False
+2023-02-28 21:03:25 Download Nightcore - Blackout 163
+2023-02-28 21:03:27 Join 218920440297553920 Miles
+2023-02-28 21:03:28 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:05:41 Join 218920440297553920 Miles
+2023-02-28 21:05:42 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:06:18 Join 218920440297553920 Miles
+2023-02-28 21:09:13 Join 218920440297553920 Miles
+2023-02-28 21:09:15 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:11:16 Join 218920440297553920 Miles
+2023-02-28 21:11:41 Join 218920440297553920 Miles
+2023-02-28 21:12:26 Join 218920440297553920 Miles
+2023-02-28 21:12:28 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:16:26 Started loading cogs ...
+2023-02-28 21:16:26 Successfully loaded all cogs!
+2023-02-28 21:16:26 Voice bot online!
+2023-02-28 21:16:34 Join 218920440297553920 Miles
+2023-02-28 21:16:36 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:16:52 Play 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-02-28 21:17:30 Play 218920440297553920 Miles Lil Nas X - Old Town Road (Gay Parody) @Kusorare 118 False
+2023-02-28 21:18:33 Play 218920440297553920 Miles 100 gecs - money machine (Official Audio Stream) 114 False
+2023-02-28 21:18:34 Play 218920440297553920 Miles Chills - Sidelined (Official Music Video) 153 False
+2023-02-28 21:18:35 Play 218920440297553920 Miles Chills - Number 15 [Official Audio] 184 False
+2023-02-28 21:18:36 Play 218920440297553920 Miles \U0001f3b5OVERWATCH: No Mercy - The Living Tombstone \U0001f3b5 171 False
+2023-02-28 21:18:37 Play 218920440297553920 Miles X-Coast - Mango Bay (Original Mix) 281 False
+2023-02-28 21:18:38 Play 218920440297553920 Miles War - Low Rider 194 False
+2023-02-28 21:18:39 Play 218920440297553920 Miles Unkle Adams - I Am Stronger (Official Anti-Bullying Music Video) 239 False
+2023-02-28 21:18:40 Play 218920440297553920 Miles Unkle Adams - Original (Official Music Video) 212 False
+2023-02-28 21:18:41 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:18:42 Play 218920440297553920 Miles Unkle Adams - Friends over Enemies (Official Music Video) 218 False
+2023-02-28 21:18:44 Play 218920440297553920 Miles Lil Nas X - Old Town Road(Gay Parody) @LockeHeartt 115 False
+2023-02-28 21:18:45 Play 218920440297553920 Miles "Revenge" - A Minecraft Parody of Usher's DJ Got Us Fallin' In Love (Music Video) 265 False
+2023-02-28 21:18:45 Play 218920440297553920 Miles Blade - Vampire Dance Club Theme 613 False
+2023-02-28 21:18:46 Play 218920440297553920 Miles Elena Stage ~ Street Fighter III 2nd Impact OST 197 False
+2023-02-28 21:18:47 Play 218920440297553920 Miles "Weird Al" Yankovic - I Think I'm A Clone Now *With Lyrics* 200 False
+2023-02-28 21:29:23 Started loading cogs ...
+2023-02-28 21:29:23 Successfully loaded all cogs!
+2023-02-28 21:29:23 Voice bot online!
+2023-02-28 21:29:35 Join 218920440297553920 Miles
+2023-02-28 21:29:37 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:30:03 Play 218920440297553920 Miles Lil Nas X - Old Town Road (Gay Parody) @Kusorare 118 False
+2023-02-28 21:30:20 Play 218920440297553920 Miles 100 gecs - money machine (Official Audio Stream) 114 False
+2023-02-28 21:30:21 Play 218920440297553920 Miles Chills - Sidelined (Official Music Video) 153 False
+2023-02-28 21:30:22 Play 218920440297553920 Miles Chills - Number 15 [Official Audio] 184 False
+2023-02-28 21:30:23 Play 218920440297553920 Miles \U0001f3b5OVERWATCH: No Mercy - The Living Tombstone \U0001f3b5 171 False
+2023-02-28 21:30:23 Play 218920440297553920 Miles X-Coast - Mango Bay (Original Mix) 281 False
+2023-02-28 21:30:24 Play 218920440297553920 Miles War - Low Rider 194 False
+2023-02-28 21:30:25 Play 218920440297553920 Miles Unkle Adams - I Am Stronger (Official Anti-Bullying Music Video) 239 False
+2023-02-28 21:30:26 Play 218920440297553920 Miles Unkle Adams - Original (Official Music Video) 212 False
+2023-02-28 21:30:27 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 21:30:28 Play 218920440297553920 Miles Unkle Adams - Friends over Enemies (Official Music Video) 218 False
+2023-02-28 21:30:29 Play 218920440297553920 Miles Lil Nas X - Old Town Road(Gay Parody) @LockeHeartt 115 False
+2023-02-28 21:30:30 Play 218920440297553920 Miles "Revenge" - A Minecraft Parody of Usher's DJ Got Us Fallin' In Love (Music Video) 265 False
+2023-02-28 21:30:31 Play 218920440297553920 Miles Blade - Vampire Dance Club Theme 613 False
+2023-02-28 21:30:32 Play 218920440297553920 Miles Elena Stage ~ Street Fighter III 2nd Impact OST 197 False
+2023-02-28 21:30:33 Play 218920440297553920 Miles "Weird Al" Yankovic - I Think I'm A Clone Now *With Lyrics* 200 False
+2023-02-28 21:30:47 Leave 218920440297553920 Miles
+2023-02-28 21:30:50 Join 218920440297553920 Miles
+2023-02-28 21:30:57 Leave 218920440297553920 Miles
+2023-02-28 22:02:03 Started loading cogs ...
+2023-02-28 22:02:03 Successfully loaded all cogs!
+2023-02-28 22:02:03 Voice bot online!
+2023-02-28 22:02:39 Join 218920440297553920 Miles
+2023-02-28 22:02:43 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:02:48 Play 218920440297553920 Miles Silentó - Watch Me (Whip/Nae Nae) (Official) 202 False
+2023-02-28 22:04:01 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:04:24 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:04:37 Download Silentó - Watch Me (Whip/Nae Nae) (Official) 202
+2023-02-28 22:13:10 Started loading cogs ...
+2023-02-28 22:13:10 Successfully loaded all cogs!
+2023-02-28 22:13:10 Voice bot online!
+2023-02-28 22:13:15 Join 218920440297553920 Miles
+2023-02-28 22:13:17 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:13:20 Play 218920440297553920 Miles Silentó - Watch Me (Whip/Nae Nae) (Official) 202 True
+2023-02-28 22:14:19 Play 218920440297553920 Miles Giannis jokes he can teach Kevin Durant how to carry his own team | NBA | UNDISPUTED 834 False
+2023-02-28 22:14:48 Play 218920440297553920 Miles Syrian Arab Republic (1963-) Patriotic pro Assad song "God, Syria and Bashar!" 249 False
+2023-02-28 22:16:59 Download Syrian Arab Republic (1963-) Patriotic pro Assad song "God, Syria and Bashar!" 249
+2023-02-28 22:17:07 Started loading cogs ...
+2023-02-28 22:18:53 Started loading cogs ...
+2023-02-28 22:18:53 Successfully loaded all cogs!
+2023-02-28 22:18:53 Voice bot online!
+2023-02-28 22:19:00 Join 218920440297553920 Miles
+2023-02-28 22:19:01 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:19:06 Play 218920440297553920 Miles Syrian Arab Republic (1963-) Patriotic pro Assad song "God, Syria and Bashar!" 249 True
+2023-02-28 22:19:31 Play 218920440297553920 Miles Laughing guy who loves food goes nuts! 245 False
+2023-02-28 22:19:48 Play 218920440297553920 Miles Fuck A Dude 149 True
+2023-02-28 22:21:44 Download Laughing guy who loves food goes nuts! 245
+2023-02-28 22:26:54 Leave 218920440297553920 Miles
+2023-03-04 01:23:34 Started loading cogs ...
+2023-03-04 01:23:34 Successfully loaded all cogs!
+2023-03-04 01:23:34 Voice bot online!
+2023-03-04 01:25:22 Started loading cogs ...
+2023-03-04 01:25:22 Successfully loaded all cogs!
+2023-03-04 01:25:22 Voice bot online!
+2023-03-04 01:26:54 Started loading cogs ...
+2023-03-04 01:27:01 Successfully loaded all cogs!
+2023-03-04 01:27:01 Voice bot online!
+2023-03-04 01:36:16 Started loading cogs ...
+2023-03-04 01:36:16 Successfully loaded all cogs!
+2023-03-04 01:36:16 Voice bot online!
+2023-03-04 01:37:44 Started loading cogs ...
+2023-03-04 01:37:44 Successfully loaded all cogs!
+2023-03-04 01:37:44 Voice bot online!
+2023-03-04 01:40:23 Started loading cogs ...
+2023-03-04 01:40:23 Successfully loaded all cogs!
+2023-03-04 01:40:23 Voice bot online!
+2023-03-04 01:51:33 Started loading cogs ...
+2023-03-04 01:53:16 Started loading cogs ...
+2023-03-04 01:54:17 Started loading cogs ...
+2023-03-04 01:54:55 Started loading cogs ...
+2023-03-04 01:54:56 Successfully loaded all cogs!
+2023-03-04 01:54:56 Voice bot online!
+2023-03-04 01:55:33 Started loading cogs ...
+2023-03-04 01:55:34 Successfully loaded all cogs!
+2023-03-04 01:55:34 Voice bot online!
+2023-03-04 01:56:14 Started loading cogs ...
+2023-03-04 01:56:15 Successfully loaded all cogs!
+2023-03-04 01:56:15 Voice bot online!
+2023-03-04 01:59:38 Started loading cogs ...
+2023-03-04 01:59:39 Successfully loaded all cogs!
+2023-03-04 01:59:39 Voice bot online!
+2023-03-04 02:03:31 Started loading cogs ...
+2023-03-04 02:03:33 Successfully loaded all cogs!
+2023-03-04 02:03:33 Voice bot online!
+2023-03-04 02:03:39 Join 218920440297553920 Miles
+2023-03-04 02:04:09 Started loading cogs ...
+2023-03-04 02:04:11 Successfully loaded all cogs!
+2023-03-04 02:04:11 Voice bot online!
+2023-03-04 02:04:19 Join 218920440297553920 Miles
+2023-03-04 02:04:26 Download WAR - Low Rider (Official Video) [Remastered in 4K] 220
+2023-03-04 02:06:54 Leave 218920440297553920 Miles
+2023-03-04 02:07:19 Started loading cogs ...
+2023-03-04 02:07:21 Successfully loaded all cogs!
+2023-03-04 02:07:21 Voice bot online!
+2023-03-04 02:07:26 Join 218920440297553920 Miles
+2023-03-04 02:10:22 Started loading cogs ...
+2023-03-04 02:10:25 Successfully loaded all cogs!
+2023-03-04 02:10:25 Voice bot online!
+2023-03-04 02:12:20 Join 218920440297553920 Miles
+2023-03-04 02:12:21 Play 218920440297553920 Miles Nightcore - All The Things She Said 159 False
+2023-03-04 02:12:27 Download Nightcore - All The Things She Said 159
+2023-03-04 02:17:44 Started loading cogs ...
+2023-03-04 02:17:46 Successfully loaded all cogs!
+2023-03-04 02:17:46 Voice bot online!
+2023-03-04 02:17:51 C:\Users\Games with Luke\Documents\discordbot\cogs\Playlist.py:93: RuntimeWarning: coroutine 'sleep' was never awaited
+  sleep(1)
+
+2023-03-04 02:18:52 Join 218920440297553920 Miles
+2023-03-04 02:19:09 Play 218920440297553920 Miles Nightcore - All The Things She Said 159 True
+2023-03-04 02:19:15 Leave 218920440297553920 Miles
+2023-03-04 02:20:49 Started loading cogs ...
+2023-03-04 02:20:51 Successfully loaded all cogs!
+2023-03-04 02:20:51 Voice bot online!
+2023-03-04 02:24:25 Join 218920440297553920 Miles
+2023-03-04 02:24:38 Play 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-04 02:26:07 Started loading cogs ...
+2023-03-04 02:26:15 Successfully loaded all cogs!
+2023-03-04 02:26:15 Voice bot online!
+2023-03-04 02:27:56 Started loading cogs ...
+2023-03-04 02:29:40 Started loading cogs ...
+2023-03-04 02:29:46 Successfully loaded all cogs!
+2023-03-04 02:29:46 Voice bot online!
+2023-03-04 02:30:39 Started loading cogs ...
+2023-03-04 02:30:44 Successfully loaded all cogs!
+2023-03-04 02:30:44 Voice bot online!
+2023-03-04 02:32:33 Started loading cogs ...
+2023-03-04 02:32:38 Successfully loaded all cogs!
+2023-03-04 02:32:38 Voice bot online!
+2023-03-04 02:33:30 Join 218920440297553920 Miles
+2023-03-25 20:10:13 Started loading cogs ...
+2023-03-25 20:10:14 Successfully loaded all cogs!
+2023-03-25 20:10:14 Voice bot online!
+2023-03-25 20:14:07 Started loading cogs ...
+2023-03-25 20:14:11 Successfully loaded all cogs!
+2023-03-25 20:14:11 Voice bot online!
+2023-03-25 20:15:15 Started loading cogs ...
+2023-03-25 20:15:16 Successfully loaded all cogs!
+2023-03-25 20:15:22 Voice bot online!
+2023-03-25 20:16:58 Started loading cogs ...
+2023-03-25 20:16:59 Successfully loaded all cogs!
+2023-03-25 20:16:59 Voice bot online!
+2023-03-25 20:20:38 Started loading cogs ...
+2023-03-25 20:20:38 Successfully loaded all cogs!
+2023-03-25 20:20:38 Voice bot online!
+2023-03-25 20:21:04 Started loading cogs ...
+2023-03-25 20:21:05 Successfully loaded all cogs!
+2023-03-25 20:21:05 Voice bot online!
+2023-03-25 20:22:42 Started loading cogs ...
+2023-03-25 20:22:43 Successfully loaded all cogs!
+2023-03-25 20:22:43 Voice bot online!
+2023-03-25 20:25:26 Started loading cogs ...
+2023-03-25 20:25:27 Successfully loaded all cogs!
+2023-03-25 20:25:27 Voice bot online!
+2023-03-25 20:26:32 Started loading cogs ...
+2023-03-25 20:26:32 Successfully loaded all cogs!
+2023-03-25 20:26:32 Voice bot online!
+2023-03-25 20:27:38 c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_resolver.py:192: DeprecationWarning: get_relationship is deprecated.
+  attr = getattr(var, name)
+
+2023-03-25 20:30:14 Started loading cogs ...
+2023-03-25 20:30:15 Successfully loaded all cogs!
+2023-03-25 20:30:15 Voice bot online!
+2023-03-25 20:32:06 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 20:32:08 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-25 20:44:15 Started loading cogs ...
+2023-03-25 20:44:15 C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py:56: RuntimeWarning: coroutine 'BotBase.load_extension' was never awaited
+  self.load_extension(f'cogs.{cog}')
+
+2023-03-25 20:44:15 Successfully loaded all cogs!
+2023-03-25 20:44:15 Voice bot online!
+2023-03-25 20:44:55 Started loading cogs ...
+2023-03-25 20:44:55 C:\Users\Games with Luke\Documents\discordbot\cogs\Clear.py:6: RuntimeWarning: coroutine 'BotBase.add_cog' was never awaited
+  bot.add_cog(Clear(bot))
+
+2023-03-25 20:46:29 Started loading cogs ...
+2023-03-25 20:46:29 C:\Users\Games with Luke\Documents\discordbot\cogs\Dalle.py:10: RuntimeWarning: coroutine 'BotBase.add_cog' was never awaited
+  bot.add_cog(Dalle(bot))
+
+2023-03-25 20:49:37 Started loading cogs ...
+2023-03-25 20:51:39 Started loading cogs ...
+2023-03-25 20:51:39 C:\Users\Games with Luke\Documents\discordbot\cogs\Soundboard.py:63: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if not ctx.message.attachments[0].content_type is 'audio/mpeg':
+
+2023-03-25 20:51:39 Successfully loaded all cogs!
+2023-03-25 20:51:39 Voice bot online!
+2023-03-25 20:52:39 Started loading cogs ...
+2023-03-25 20:52:40 Successfully loaded all cogs!
+2023-03-25 20:52:40 Voice bot online!
+2023-03-25 20:53:29 Started loading cogs ...
+2023-03-25 20:53:30 Successfully loaded all cogs!
+2023-03-25 20:53:30 Voice bot online!
+2023-03-25 20:54:27 Started loading cogs ...
+2023-03-25 20:54:28 Successfully loaded all cogs!
+2023-03-25 20:54:28 Voice bot online!
+2023-03-25 20:54:40 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 20:54:48 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-25 20:59:25 Started loading cogs ...
+2023-03-25 20:59:26 Successfully loaded all cogs!
+2023-03-25 20:59:26 Voice bot online!
+2023-03-25 20:59:33 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 20:59:35 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-25 21:00:03 Started loading cogs ...
+2023-03-25 21:00:04 Successfully loaded all cogs!
+2023-03-25 21:00:04 Voice bot online!
+2023-03-25 21:00:13 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 21:00:15 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-25 21:06:02 Started loading cogs ...
+2023-03-25 21:06:02 Successfully loaded all cogs!
+2023-03-25 21:06:02 Voice bot online!
+2023-03-25 23:00:46 Started loading cogs ...
+2023-03-25 23:00:47 Successfully loaded all cogs!
+2023-03-25 23:00:47 Voice bot online!
+2023-03-25 23:00:49 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 23:00:53 Play 225612207432400896 218920440297553920 Miles Fuck A Dude 149 False
+2023-03-25 23:03:13 Started loading cogs ...
+2023-03-25 23:03:14 Successfully loaded all cogs!
+2023-03-25 23:03:14 Voice bot online!
+2023-03-25 23:03:19 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 23:03:20 Play 225612207432400896 218920440297553920 Miles Fuck A Dude 149 True
+2023-03-25 23:03:34 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-03-25 23:10:05 Started loading cogs ...
+2023-03-25 23:10:05 Successfully loaded all cogs!
+2023-03-25 23:10:05 Voice bot online!
+2023-03-25 23:10:07 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 23:10:11 Leave 225612207432400896 218920440297553920 Miles
+2023-03-25 23:10:14 Join 225612207432400896 218920440297553920 Miles
+2023-03-25 23:10:22 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-03-25 23:16:18 Join 1049905016850350170 218920440297553920 Miles
+2023-03-25 23:16:25 Play 1049905016850350170 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-03-25 23:16:38 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-04-23 16:17:26 Started loading cogs ...
+2023-04-23 16:17:27 Successfully loaded all cogs!
+2023-04-23 16:17:27 Voice bot online!
+2023-04-23 16:17:29 Join 225612207432400896 218920440297553920 Miles
+2023-04-23 22:15:41 Using proactor: IocpProactor
+2023-04-23 22:15:41 logging in using static token
+2023-04-23 22:15:42 Shard ID None has connected to Gateway (Session ID: 2308dc4f49b4dd900b6cfced19de1698).
+2023-04-23 22:15:44 Started loading cogs ...
+2023-04-23 22:15:44 matched regex search: (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2023-04-23 22:15:45 Successfully loaded all cogs!
+2023-04-23 22:15:45 Voice bot online!
+2023-04-23 22:15:56 Connecting to voice...
+2023-04-23 22:15:56 Starting voice handshake... (connection attempt 1)
+2023-04-23 22:15:57 Voice handshake complete. Endpoint found seattle6151.discord.media
+2023-04-23 22:15:57 Join 225612207432400896 218920440297553920 Miles
+2023-04-23 22:16:02 matched regex search: (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2023-04-23 22:16:03 applying descrambler
+2023-04-23 22:16:03 finding initial function name
+2023-04-23 22:16:03 Pattern failed: ytplayer\.config\s*=\s*
+2023-04-23 22:16:03 Could not parse object.
+2023-04-23 22:16:03 finished regex search, matched: (/s/player/[\w\d]+/[\w\d_/.]+/base\.js)
+2023-04-23 22:16:04 finding initial function name
+2023-04-23 22:16:04 finished regex search, matched: (?:\b|[^a-zA-Z0-9$])(?P<sig>[a-zA-Z0-9$]{2})\s*=\s*function\(\s*a\s*\)\s*{\s*a\s*=\s*a\.split\(\s*""\s*\)
+2023-04-23 22:16:04 getting transform plan
+2023-04-23 22:16:04 matched regex search: ta=function\(\w\){[a-z=\.\(\"\)]*;(.*);(?:.+)}
+2023-04-23 22:16:04 getting transform object
+2023-04-23 22:16:04 Finding throttling function name
+2023-04-23 22:16:04 finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+2023-04-23 22:16:06 Finding throttling function name
+2023-04-23 22:16:06 finished regex search, matched: a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)
+2023-04-23 22:16:15 Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 46, in play
+    if song.length > MAX_SONG_DURATION:
+  File "C:\Users\Games with Luke\Documents\discordbot\Song.py", line 41, in length
+    stream = self.yt_obj.streams.first()
+  File "C:\Python39\lib\site-packages\pytube\__main__.py", line 296, in streams
+    return StreamQuery(self.fmt_streams)
+  File "C:\Python39\lib\site-packages\pytube\__main__.py", line 181, in fmt_streams
+    extract.apply_signature(stream_manifest, self.vid_info, self.js)
+  File "C:\Python39\lib\site-packages\pytube\extract.py", line 409, in apply_signature
+    cipher = Cipher(js=js)
+  File "C:\Python39\lib\site-packages\pytube\cipher.py", line 44, in __init__
+    self.throttling_array = get_throttling_function_array(js)
+  File "C:\Python39\lib\site-packages\pytube\cipher.py", line 341, in get_throttling_function_array
+    str_array = throttling_array_split(array_raw)
+  File "C:\Python39\lib\site-packages\pytube\parser.py", line 176, in throttling_array_split
+    curr_substring = curr_substring[match_end:]
+
+2023-04-23 22:16:25 Shard ID None voice heartbeat blocked for more than 20 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 46, in play
+    if song.length > MAX_SONG_DURATION:
+  File "C:\Users\Games with Luke\Documents\discordbot\Song.py", line 41, in length
+    stream = self.yt_obj.streams.first()
+  File "C:\Python39\lib\site-packages\pytube\__main__.py", line 296, in streams
+    return StreamQuery(self.fmt_streams)
+  File "C:\Python39\lib\site-packages\pytube\__main__.py", line 181, in fmt_streams
+    extract.apply_signature(stream_manifest, self.vid_info, self.js)
+  File "C:\Python39\lib\site-packages\pytube\extract.py", line 409, in apply_signature
+    cipher = Cipher(js=js)
+  File "C:\Python39\lib\site-packages\pytube\cipher.py", line 44, in __init__
+    self.throttling_array = get_throttling_function_array(js)
+  File "C:\Python39\lib\site-packages\pytube\cipher.py", line 341, in get_throttling_function_array
+    str_array = throttling_array_split(array_raw)
+  File "C:\Python39\lib\site-packages\pytube\parser.py", line 176, in throttling_array_split
+    curr_substring = curr_substring[match_end:]
+
+2023-04-23 22:16:27 signature found, skip decipher
+2023-04-23 22:16:27 signature found, skip decipher
+2023-04-29 16:28:53 Using proactor: IocpProactor
+2023-04-29 16:28:53 logging in using static token
+2023-04-29 16:28:54 Shard ID None has connected to Gateway (Session ID: d8ebeae0cdf37d87d26410f658c07c34).
+2023-04-29 16:28:56 Started loading cogs ...
+2023-04-29 16:28:57 Successfully loaded all cogs!
+2023-04-29 16:28:57 Voice bot online!
+2023-04-29 16:30:02 Connecting to voice...
+2023-04-29 16:30:02 Starting voice handshake... (connection attempt 1)
+2023-04-29 16:30:02 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:30:02 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 16:30:17 Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 52, in play
+    message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:30:26 Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 52, in play
+    message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:30:27 Shard ID None voice heartbeat blocked for more than 20 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 52, in play
+    message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:30:36 Shard ID None heartbeat blocked for more than 20 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 52, in play
+    message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:30:37 Shard ID None voice heartbeat blocked for more than 30 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 92, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 89, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 52, in play
+    message += f"Added {song} {utils.seconds_to_time(song.length)}\n"
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:30:56 Using proactor: IocpProactor
+2023-04-29 16:30:56 logging in using static token
+2023-04-29 16:30:57 Shard ID None has connected to Gateway (Session ID: 29e09469613d725c9d49b85705c0cc44).
+2023-04-29 16:30:59 Started loading cogs ...
+2023-04-29 16:31:00 Successfully loaded all cogs!
+2023-04-29 16:31:00 Voice bot online!
+2023-04-29 16:31:03 Connecting to voice...
+2023-04-29 16:31:03 Starting voice handshake... (connection attempt 1)
+2023-04-29 16:31:03 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:31:04 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 16:31:06 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 False
+2023-04-29 16:31:06 ffmpeg process 1496 successfully terminated with return code of 1.
+2023-04-29 16:44:33 Using proactor: IocpProactor
+2023-04-29 16:44:33 logging in using static token
+2023-04-29 16:44:33 Shard ID None has connected to Gateway (Session ID: 49849781503fe355ee8fd18391d06c04).
+2023-04-29 16:44:36 Started loading cogs ...
+2023-04-29 16:44:37 Successfully loaded all cogs!
+2023-04-29 16:44:37 Voice bot online!
+2023-04-29 16:44:47 Connecting to voice...
+2023-04-29 16:44:47 Starting voice handshake... (connection attempt 1)
+2023-04-29 16:44:47 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:44:48 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 16:45:03 Shard ID None voice heartbeat blocked for more than 10 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 90, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 87, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 36, in play
+    yt_list = MilesYoutube.find_video(arg)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:45:13 Shard ID None voice heartbeat blocked for more than 20 seconds
+Loop thread traceback (most recent call last):
+  File "C:\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\__main__.py", line 45, in <module>
+    cli.main()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 444, in main
+    run()
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy/..\debugpy\server\cli.py", line 285, in run_file
+    runpy.run_path(target_as_str, run_name=compat.force_str("__main__"))
+  File "C:\Python39\lib\runpy.py", line 268, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "C:\Python39\lib\runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "C:\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 90, in <module>
+    main()
+  File "C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py", line 87, in main
+    bot.run(token)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 860, in run
+    asyncio.run(runner())
+  File "C:\Python39\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+  File "C:\Python39\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+  File "C:\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+  File "C:\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Python39\lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1395, in on_message
+    await self.process_commands(message)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1392, in process_commands
+    await self.invoke(ctx)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 36, in play
+    yt_list = MilesYoutube.find_video(arg)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2023, in do_wait_suspend
+    keep_suspended = self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread, frames_tracker)
+  File "c:\program files\microsoft visual studio\2022\community\common7\ide\extensions\microsoft\python\core\debugpy\_vendored\pydevd\pydevd.py", line 2059, in _do_wait_suspend
+    time.sleep(0.01)
+
+2023-04-29 16:45:19 Ignoring exception in command play
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 229, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "C:\Users\Games with Luke\Documents\discordbot\cogs\Play.py", line 36, in play
+    yt_list = MilesYoutube.find_video(arg)
+  File "C:\Users\Games with Luke\Documents\discordbot\MilesYoutube.py", line 64, in find_video
+    return (ydl.extract_info(search(input), download=False, process=False),)
+  File "C:\Users\Games with Luke\Documents\discordbot\MilesYoutube.py", line 38, in search
+    clean_keyword = clean_keyword(keyword)
+UnboundLocalError: local variable 'clean_keyword' referenced before assignment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\discord\ext\commands\bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 1023, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+  File "C:\Python39\lib\site-packages\discord\ext\commands\core.py", line 238, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: UnboundLocalError: local variable 'clean_keyword' referenced before assignment
+2023-04-29 16:45:19 Disconnected from voice... Reconnecting in 0.15s.
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\aiohttp\client_ws.py", line 230, in receive
+    msg = await self._reader.read()
+  File "C:\Python39\lib\site-packages\aiohttp\streams.py", line 644, in read
+    return await super().read()
+  File "C:\Python39\lib\site-packages\aiohttp\streams.py", line 604, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\asyncio\tasks.py", line 492, in wait_for
+    fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\discord\voice_client.py", line 456, in poll_voice_ws
+    await self.ws.poll_event()
+  File "C:\Python39\lib\site-packages\discord\gateway.py", line 998, in poll_event
+    msg = await asyncio.wait_for(self.ws.receive(), timeout=30.0)
+  File "C:\Python39\lib\asyncio\tasks.py", line 494, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+2023-04-29 16:45:20 The voice handshake is being terminated for Channel ID 322959778701639682 (Guild ID 225612207432400896)
+2023-04-29 16:45:20 Connecting to voice...
+2023-04-29 16:45:20 Starting voice handshake... (connection attempt 2)
+2023-04-29 16:45:20 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:45:48 Using proactor: IocpProactor
+2023-04-29 16:45:48 logging in using static token
+2023-04-29 16:45:49 Shard ID None has connected to Gateway (Session ID: 27fa198a8b58c31a4791b950c2cd1e1d).
+2023-04-29 16:45:51 Started loading cogs ...
+2023-04-29 16:45:52 Successfully loaded all cogs!
+2023-04-29 16:45:52 Voice bot online!
+2023-04-29 16:45:53 Connecting to voice...
+2023-04-29 16:45:53 Starting voice handshake... (connection attempt 1)
+2023-04-29 16:45:54 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:45:54 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 16:46:59 Using proactor: IocpProactor
+2023-04-29 16:46:59 logging in using static token
+2023-04-29 16:47:00 Shard ID None has connected to Gateway (Session ID: 61bc9945a07356417f1afff68aff9e01).
+2023-04-29 16:47:02 Started loading cogs ...
+2023-04-29 16:47:03 Successfully loaded all cogs!
+2023-04-29 16:47:03 Voice bot online!
+2023-04-29 16:47:05 Connecting to voice...
+2023-04-29 16:47:05 Starting voice handshake... (connection attempt 1)
+2023-04-29 16:47:05 Voice handshake complete. Endpoint found seattle1540.discord.media
+2023-04-29 16:47:05 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 16:47:08 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 False
+2023-04-29 16:47:34 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 False
+2023-04-29 16:47:46 ffmpeg process 18832 has not terminated. Waiting to terminate...
+2023-04-29 16:47:46 ffmpeg process 18832 should have terminated with a return code of 1.
+2023-04-29 16:48:29 ffmpeg process 19096 has not terminated. Waiting to terminate...
+2023-04-29 16:48:29 ffmpeg process 19096 should have terminated with a return code of 1.
+2023-04-29 16:48:44 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-04-29 16:48:48 Play 225612207432400896 218920440297553920 Miles I Just Fucked A Dude 7 False
+2023-04-29 16:49:41 Play 225612207432400896 218920440297553920 Miles Fuck A Dude 149 False
+2023-04-29 16:51:29 ffmpeg process 3420 successfully terminated with return code of 0.
+2023-04-29 16:51:45 ffmpeg process 12832 successfully terminated with return code of 0.
+2023-04-29 16:53:25 ffmpeg process 8636 has not terminated. Waiting to terminate...
+2023-04-29 16:53:25 ffmpeg process 8636 should have terminated with a return code of 1.
+2023-04-29 16:55:39 ffmpeg process 724 successfully terminated with return code of 0.
+2023-04-29 17:00:43 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:00:45 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-04-29 17:01:12 Play 225612207432400896 218920440297553920 Miles 10000 Play Point In Indian \U0001f1ee\U0001f1f3Server Play store \U0001f631 Best Play Point Server 2022 #playpoints 35 False
+2023-04-29 17:02:33 Play 225612207432400896 218920440297553920 Miles Nightcore - All The Things She Said (Rock Version) (Lyrics) 205 False
+2023-04-29 17:03:01 Leave 225612207432400896 218920440297553920 Miles
+2023-04-29 17:09:08 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:09:10 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-04-29 17:09:14 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-04-29 17:09:52 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:09:54 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-04-29 17:09:57 Play 225612207432400896 218920440297553920 Miles Nightcore - Blackout 163 True
+2023-04-29 17:13:16 Voice bot online!
+2023-04-29 17:13:18 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:14:24 Voice bot online!
+2023-04-29 17:14:26 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:54:58 Voice bot online!
+2023-04-29 17:55:02 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:55:03 Play 225612207432400896 218920440297553920 Miles SpongeBob SquarePants Production Music - Tomfoolery 127 False
+2023-04-29 17:57:26 Voice bot online!
+2023-04-29 17:57:29 Join 225612207432400896 218920440297553920 Miles
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles 100 gecs - money machine (Official Audio Stream) 115 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Chills - Sidelined (Official Music Video) 154 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Chills - Number 15 [Official Audio] 184 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles \U0001f3b5OVERWATCH: No Mercy - The Living Tombstone \U0001f3b5 171 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles X-Coast - Mango Bay (Original Mix) 281 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles War - Low Rider 195 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Unkle Adams - I Am Stronger (Official Anti-Bullying Music Video) 239 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Unkle Adams - Original (Official Music Video) 212 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Fuck A Dude 149 True
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Unkle Adams - Friends over Enemies (Official Music Video) 219 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Lil Nas X - Old Town Road(Gay Parody) @LockeHeartt 115 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles "Revenge" - A Minecraft Parody of Usher's DJ Got Us Fallin' In Love (Music Video) 265 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Blade - Vampire Dance Club Theme 613 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Elena Stage ~ Street Fighter III 2nd Impact OST 197 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles "Weird Al" Yankovic - I Think I'm A Clone Now *With Lyrics* 201 False
+2023-04-29 17:57:29 Play 225612207432400896 218920440297553920 Miles Fetty wap clears it all up 16 False
+2023-04-29 17:57:42 Play 225612207432400896 218920440297553920 Miles SpongeBob SquarePants Production Music - Tomfoolery 127 True
+2023-04-29 17:58:24 Play 225612207432400896 218920440297553920 Miles Shin Megami Tensei V (OST) | Battle Theme 7 - Boss Battle 275 False
+2023-04-29 17:58:39 Play 225612207432400896 218920440297553920 Miles WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-04-29 17:59:35 Play 225612207432400896 218920440297553920 Miles 100 gecs - money machine (Official Audio Stream) 115 True
+2023-04-29 17:59:42 Play 225612207432400896 218920440297553920 Miles Chills - Sidelined (Official Music Video) 154 False
+2023-07-15 16:18:43 Voice bot online!
+2023-07-15 16:18:53 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:19:23 Play 225612207432400896 218920440297553920 miles336 WAR - Low Rider (Official Video) [Remastered in 4K] 220 False
+2023-07-15 16:22:19 Voice bot online!
+2023-07-15 16:22:38 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:22:41 Play 225612207432400896 218920440297553920 miles336 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-07-15 16:34:29 Voice bot online!
+2023-07-15 16:34:38 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:34:41 Play 225612207432400896 218920440297553920 miles336 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-07-15 16:36:46 Voice bot online!
+2023-07-15 16:36:53 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:36:55 Play 225612207432400896 218920440297553920 miles336 WAR - Low Rider (Official Video) [Remastered in 4K] 220 True
+2023-07-15 16:38:13 Play 225612207432400896 218920440297553920 miles336 Nightcore - Blackout 163 False
+2023-07-15 16:38:48 Voice bot online!
+2023-07-15 16:38:58 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:39:00 Play 225612207432400896 218920440297553920 miles336 Nightcore - Blackout 163 True
+2023-07-15 16:39:42 Voice bot online!
+2023-07-15 16:39:53 Join 225612207432400896 218920440297553920 miles336
+2023-07-15 16:39:55 Play 225612207432400896 218920440297553920 miles336 Nightcore - Blackout 163 True
+2023-08-06 16:23:46 Voice bot online!
+2023-08-06 16:23:46 C:\Users\Games with Luke\Documents\discordbot\VoiceBot.py:36: RuntimeWarning: coroutine 'start_spitroast_pinger' was never awaited
+  start_spitroast_pinger(self)
+
+2023-08-06 16:24:22 Voice bot online!
+2023-08-06 16:24:23 C:\Users\Games with Luke\Documents\discordbot\randomBullshit\SpitroastDraftPinger.py:82: RuntimeWarning: coroutine 'Messageable.send' was never awaited
+  channel.send(f"<@{userId}> its your turn to pick now bruv.\n https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900")
+
+2023-08-06 16:24:58 Voice bot online!
+2023-08-06 16:24:59 C:\Users\Games with Luke\Documents\discordbot\randomBullshit\SpitroastDraftPinger.py:82: RuntimeWarning: coroutine 'Messageable.send' was never awaited
+  channel.send(f"<@{userId}> its your turn to pick now bruv.\n https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900")
+
+2023-08-06 16:25:57 Voice bot online!
+2023-08-07 17:13:23 Voice bot online!
+2023-08-07 20:56:39 Voice bot online!
