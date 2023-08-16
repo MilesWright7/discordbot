@@ -16,6 +16,8 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0'
 SAMPLE_RANGE_NAME = 'Draft!F1'
+LAST_PICK_TEXT = 'Draft!P23'
+OTHER_LAST_PICK = 'Draft!P24'
 
 RUN_THIS = True
 
@@ -63,17 +65,24 @@ async def start_spitroast_pinger(bot):
 		try:
 			result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
 								range=SAMPLE_RANGE_NAME).execute()
+			last_pick = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+								range=LAST_PICK_TEXT).execute()
+			last_pick2 = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+								range=OTHER_LAST_PICK).execute()
+
 			values = result.get('values', [])
 			userId = PLAYERS_DICT[values[0][0]]
+			lp = last_pick.get('values', [])[0][0]
+
 			if oldId != userId:
 				oldId = userId
-				await send_nudes(userId, channel)
+				await send_nudes(userId, channel, lp)
 
 		except HttpError as err:
 			print(err)
 		
 		await asyncio.sleep(300)
 
-async def send_nudes(userId, channel : discord.channel.TextChannel):
-	await channel.send(f"<@{userId}> its your turn to pick now bruv. https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900")
+async def send_nudes(userId, channel : discord.channel.TextChannel, last_pick):
+	await channel.send(f"<@{userId}> its your turn to pick now bruv. Last pick was {last_pick}. https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900")
 	
