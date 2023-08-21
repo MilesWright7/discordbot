@@ -84,5 +84,5 @@ async def start_spitroast_pinger(bot):
 		await asyncio.sleep(300)
 
 async def send_nudes(userId, channel : discord.channel.TextChannel, last_pick):
-	await channel.send(f"<@{userId}> its your turn to pick now bruv. Last pick was {last_pick}./n[Draft](<https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900>) [Cube](<https://www.cubecobra.com/cube/list/8gv?view=spoiler&scale=small>)")
+	await channel.send(f"<@{userId}> its your turn to pick now bruv. Last pick was {last_pick}.\n[Draft](<https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900>) [Cube](<https://www.cubecobra.com/cube/list/8gv?view=spoiler&scale=small>)")
 	
