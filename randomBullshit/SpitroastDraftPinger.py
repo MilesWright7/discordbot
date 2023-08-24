@@ -76,10 +76,10 @@ async def start_spitroast_pinger(bot):
 			lp = ""
 			lp2 = ""
 			if lastpick != None:
-				lp = lastpick[0][0]
+				lp = lastpick[0]
 			lastpick2 = last_pick2.get('values', [])[0][0]
 			if lastpick2 != None:
-				lp2 = lastpick2[0][0]
+				lp2 = lastpick2[0]
 
 			if oldId != userId:
 				oldId = userId
