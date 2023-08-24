@@ -72,12 +72,12 @@ async def start_spitroast_pinger(bot):
 
 			values = result.get('values', [])
 			userId = PLAYERS_DICT[values[0][0]]
-			lastpick = last_pick.get('values', [])[0][0]
+			lastpick = last_pick.get('values', [])
 			lp = ""
 			lp2 = ""
 			if lastpick != None:
 				lp = lastpick[0]
-			lastpick2 = last_pick2.get('values', [])[0][0]
+			lastpick2 = last_pick2.get('values', [])
 			if lastpick2 != None:
 				lp2 = lastpick2[0]
 
@@ -91,5 +91,5 @@ async def start_spitroast_pinger(bot):
 		await asyncio.sleep(300)
 
 async def send_nudes(userId, channel : discord.channel.TextChannel, last_pick, lp2):
-	await channel.send(f"<@{userId}> its your turn to pick now bruv. Last picks were {last_pick}, {lp2}.\n[Draft](<https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900>) [Cube](<https://www.cubecobra.com/cube/list/8gv?view=spoiler&scale=small>)")
+	await channel.send(f"<@{userId}> its your turn to pick now bruv. Last picks were {last_pick}, {lp2}.\n[Draft](<https://docs.google.com/spreadsheets/d/1JT5zDoT9ind7NOgk_MF4MkI-9R97JKForhYxSEYSKs0/edit#gid=1822506900>)\t[Cube](<https://www.cubecobra.com/cube/list/8gv?view=spoiler&scale=small>)")
 	
