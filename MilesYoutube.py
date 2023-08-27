@@ -45,7 +45,8 @@ def search(keyword:str):
 	clean_keyword = clean_keyword(keyword)
 	html = urllib.request.urlopen(yt_querry_string + clean_keyword)
 	videoIds = re.findall(r"watch\?v=(\S{11})", html.read().decode())
-	return yt_watch_string + videoIds[0]
+	print(videoIds)
+	return yt_watch_string + videoIds[1]
 
 
 def download(url:str):
@@ -69,33 +70,14 @@ def find_video(input:str):
 			info = ydl.extract_info(input, download=False, process=False)
 			return list(info['entries'])
 		
+
 		return (ydl.extract_info(search(input), download=False, process=False),)
 
 	
 
-	
-# Not used
-def download_from_keyword(keyword:str):
-	link = search(keyword)
-	download(link)
-
-
-# Not used
-def file_exists(link):
-	return os.path.exists(f"downloads/{link[-8:]}.mp3")
-	
-
-# Not used
-def convert_to_mp3(mp4_path, mp3_path):
-	clip = VideoFileClip(mp4_path)
-	clip.audio.write_audiofile(mp3_path)
-	clip.close()
-
-
-
 if __name__ == '__main__':
 	#vid = yt.search('nightcore blackout')
-	print(find_video('https://www.youtube.com/watch?v=X-1SbC14LZ4'))
+	print(search('no diggity song'))
 	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
 	#print(info.keys())
 	#print(info)
