@@ -16,10 +16,7 @@ class Leave(commands.Cog):
 	async def leave(self, ctx):
 		player = self.bot.players[ctx.guild.id]
 		try:
-			player.stop()
-			await player.disconnect()
-			player.reset()
-			handle_downloads_space()
+			await player.leave()
 			await ctx.send(embed=Embed.from_dict({"title": "Leave", "description": "Goodbye"}))
 			self.bot.log("Leave", ctx.guild.id, ctx.author.id, ctx.author.name)
 		

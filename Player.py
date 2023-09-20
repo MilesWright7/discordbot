@@ -53,6 +53,7 @@ class Player(object):
 
 	async def leave(self):
 		self.stop()
+		await self.disconnect()
 		self.reset()
 		handle_downloads_space()
 
@@ -62,10 +63,12 @@ class Player(object):
 
 
 	def reset(self):
+		self.VC = None
 		self.que.clear()
 		self.now_playing = None
 		self.playback_speed = 1
 		self.nightcore = False
+		self.bassboost = False
 		self.looping = False
 
 

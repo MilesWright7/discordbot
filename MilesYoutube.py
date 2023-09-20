@@ -45,7 +45,6 @@ def search(keyword:str):
 	clean_keyword = clean_keyword(keyword)
 	html = urllib.request.urlopen(yt_querry_string + clean_keyword)
 	videoIds = re.findall(r"watch\?v=(\S{11})", html.read().decode())
-	print(videoIds)
 	return yt_watch_string + videoIds[1]
 
 
