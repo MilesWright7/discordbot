@@ -1,6 +1,6 @@
 import os
 
-SIZE_LIMIT = 7 * 1000 * 1000 * 1000
+SIZE_LIMIT = 5 * 1000 * 1000 * 1000
 
 def get_size_of_downloads_folder():
     folderPath = './downloads'
