@@ -151,6 +151,8 @@ class Player(object):
 	# Play 
 	def play_song(self):
 		self.now_playing = self.dequeue()
+		if not self.now_playing:
+			return
 		self.waiting_for_download = True
 		self.now_playing.download()
 		self.waiting_for_download = False

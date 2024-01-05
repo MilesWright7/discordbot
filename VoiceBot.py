@@ -73,7 +73,7 @@ class VoiceBot(commands.Bot):
 	async def on_message(self, message):
 		ctx = await self.get_context(message)
 		if ctx.valid:
-			await bot.invoke(ctx)
+			await self.invoke(ctx)
 
 
 def main():
