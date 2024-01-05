@@ -34,7 +34,7 @@ class VoiceBot(commands.Bot):
 		await self.init()
 		await self.change_presence(status=discord.Status.online, activity=discord.Game("@Miles if I break"));
 		logging.info("Voice bot online!")
-		await asyncio.create_task(start_spitroast_pinger(self))
+		# await asyncio.create_task(start_spitroast_pinger(self))
 
 
 	async def on_guild_join(self, guild):
@@ -68,6 +68,12 @@ class VoiceBot(commands.Bot):
 			players[guild.id] = Player()
 
 		return players
+
+	# to skip check to ignore bot messages
+	async def on_message(self, message):
+		ctx = await self.get_context(message)
+		if ctx.valid:
+			await bot.invoke(ctx)
 
 
 def main():
