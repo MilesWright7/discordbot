@@ -5,7 +5,7 @@ import MilesYoutube
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
 
-commands = {"play", "show", "remove", "add"}
+COMMANDS = {"play", "show", "remove", "add"}
 
 async def setup(bot):
 	await bot.add_cog(Playlist(bot))
@@ -65,8 +65,8 @@ class Playlist(commands.Cog):
 		playlist_name = playlist_name.lower()
 		
 		# common user error. allow for swapped paramaterssa
-		if not command in commands:
-			if not playlist_name in commands:
+		if not command in COMMANDS:
+			if not playlist_name in COMMANDS:
 				e=Embed.from_dict({"title":"Playlist","description":f"Usage: commands (add, remove, show, play), playlist name, song name\nFor example\n=playlist add dota2 low rider",}) 
 				await ctx.send(embed=e)
 				return
