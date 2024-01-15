@@ -5,7 +5,7 @@ import MilesYoutube
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
 
-commands = {"play, show, remove, add"}
+commands = {"play", "show", "remove", "add"}
 
 async def setup(bot):
 	await bot.add_cog(Playlist(bot))
