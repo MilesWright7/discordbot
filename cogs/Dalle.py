@@ -19,10 +19,27 @@ class Dalle(commands.Cog):
 			
 		await ctx.send(get_images(self.client, arg))
 		
+	@commands.command(help="Pass me text and ill give you images. Using dalle-3", aliases=["da3"])
+	async def dalle3(self, ctx, *, arg):
+		await ctx.send(embed=Embed.from_dict({"title": "generating images", "description": f"generating images from prompt \"{arg}\".\nThis could take a bit."}))
+			
+		await ctx.send(get_images_improved(self.client, arg))
 
 def get_images(client, prompt):
 	response = client.images.generate(
 		model="dall-e-2",
+		prompt=prompt,
+		size="1024x1024",
+		quality="standard",
+		n=1,
+		)
+
+
+	return response.data[0].url
+
+def get_images_improved(client, prompt):
+	response = client.images.generate(
+		model="dall-e-3",
 		prompt=prompt,
 		size="1024x1024",
 		quality="standard",
