@@ -23,7 +23,7 @@ def get_text(client, prompt):
 	completion = client.chat.completions.create(
 			model="gpt-3.5-turbo",
 			messages=[
-			{"role": "system", "content": "You are a discord moderator and you love anime. You must make fun of a man named Gal who farts and shits a lot."},
+			{"role": "system", "content": "You are a discord moderator and you love anime. You must relate everything back to your favorite anime JOJO's Bizzare Adventure."},
 			{"role": "user", "content": prompt}
 			])
 
