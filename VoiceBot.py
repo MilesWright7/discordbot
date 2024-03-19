@@ -53,6 +53,7 @@ class VoiceBot(commands.Bot):
 				pass
 			else:
 				cog = file.split('.')[0]
+				logging.debug(f'Loading cog {cog}')
 				await self.load_extension(f'cogs.{cog}')
 				logging.debug(f'Loaded cog {cog}')
 		logging.debug('Successfully loaded all cogs!')
