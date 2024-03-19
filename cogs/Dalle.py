@@ -52,7 +52,7 @@ def get_images_improved(client, prompt):
 
 def main():
 	client = OpenAI()
-	print(get_images(client, "farting doggy"))
+	print(get_images(client, "silly cat climbing the wall while the dog watches from the ground, left int the dust sucker!"))
 
 	#completion = client.chat.completions.create(
 	#		model="gpt-3.5-turbo",
