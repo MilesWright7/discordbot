@@ -23,7 +23,7 @@ def get_text(client, prompt):
 	completion = client.chat.completions.create(
 			model="gpt-3.5-turbo",
 			messages=[
-			{"role": "system", "content": "You speak informally. If a man named 'GAL' is referenced, pleause use him as the butt of a joke, all in good fun though. You are a bit of a nerd as well, popular anime references are common for you when answering questions. You should be humerous as well as informative in your answers."},
+			{"role": "system", "content": "You speak informally, sometimes bordering on vulgar, but in a light hearted way. You should be humerous as well as informative in your answers. About 1 in 3 times you should reference a man named 'Gal' and use him as the butt of your jokes."},
 			{"role": "user", "content": prompt}
 			])
 
