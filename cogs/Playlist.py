@@ -1,6 +1,9 @@
+from ast import Dict, List
+import os
 from discord.ext import commands
 from discord import Embed
 import MilesYoutube
+from VoiceBot import VoiceBot
 
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
@@ -12,7 +15,7 @@ async def setup(bot):
 
 
 class Playlist(commands.Cog):
-	def __init__(self, bot):
+	def __init__(self, bot: VoiceBot):
 		self.bot = bot
 		self.playlists = {}
 		self.load_playlists()
@@ -21,9 +24,22 @@ class Playlist(commands.Cog):
 	def load_playlists(self):
 		with open(SAVE_PLAYLIST_PATH, 'r') as f:
 			for entry in f:
-				playlist = entry.split(",")
+				playlist = entry.strip().split(",")
 				title = playlist.pop(0)
-				self.playlists[title] = [self.bot.new_song(MilesYoutube.find_video(self.create_youtube_link(song))[0]) for song in playlist]
+				self.playlists[title] = []
+				for entry in playlist:
+					yt_obj = []
+					try:
+						yt_obj = MilesYoutube.find_video(self.create_youtube_link(entry))[0]
+					except:
+						if(os.path.exists("downloads/" + entry + ".mp3")):
+							yt_obj = {"id": entry, "duration": 200, "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "title": "Bofa Deez - Candice"}
+						
+						else:
+							continue
+						
+					song = self.bot.new_song(yt_obj)
+					self.playlists[title].append(song)
 
 
 	def save_playlists(self):
