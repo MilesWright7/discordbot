@@ -31,7 +31,7 @@ ydl_opts = {
     'cookiefile': 'cookies.txt'
 }
 watch_re = re.compile('watch?v=')
-playlist_re = re.compile('playlist\\?list=')
+playlist_re = re.compile('playlist?list=')
 alt_yt_link_re = re.compile('youtu.be/')
 yt_watch_string = "https://www.youtube.com/watch?v="
 yt_querry_string = "https://www.youtube.com/results?search_query="
