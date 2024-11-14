@@ -8,6 +8,7 @@ from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 from concurrent.futures import ThreadPoolExecutor
 import asyncio
+import logging
 
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
@@ -23,11 +24,9 @@ class Playlist(commands.Cog):
 		self.bot = bot
 		self.playlists = {}
 		asyncio.create_task(self.load_playlists())
-		#asyncio.run()
 
 	def get_info(self, id):
 		yt_obj = []
-		print("getting info for " + id)
 		try:
 			if(os.path.exists("downloads/" + id + ".mp3")):
 				audio = EasyID3("downloads/" + id + ".mp3")
@@ -40,14 +39,14 @@ class Playlist(commands.Cog):
 				try:
 					yt_obj = MilesYoutube.find_video(self.create_youtube_link(id))[0]
 				except Exception as e:
-					print(e)
+					logging.warning(e)
 					if(os.path.exists("downloads/" + id + ".mp3")):
 						return {"id": id, "duration": 200, "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "title": "Bofa Deez - Candice"}
 					else:
 						return None
 				return yt_obj
 		except Exception as e:
-			print(e)
+			logging.warning(e)
 			return None
 				
 	
@@ -68,6 +67,10 @@ class Playlist(commands.Cog):
 				if item:
 					song = self.bot.new_song(item)
 					self.playlists[title].append(song)	
+
+			logging.info(f"Playlist {title} finished loading")
+
+		logging.info("All playlists finished loading")
 		return
 
 
