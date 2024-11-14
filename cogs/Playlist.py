@@ -4,6 +4,10 @@ from discord.ext import commands
 from discord import Embed
 import MilesYoutube
 from VoiceBot import VoiceBot
+from mutagen.easyid3 import EasyID3
+from mutagen.mp3 import MP3
+from concurrent.futures import ThreadPoolExecutor
+import asyncio
 
 
 SAVE_PLAYLIST_PATH = "playlists.csv"
@@ -18,28 +22,52 @@ class Playlist(commands.Cog):
 	def __init__(self, bot: VoiceBot):
 		self.bot = bot
 		self.playlists = {}
-		self.load_playlists()
+		asyncio.create_task(self.load_playlists())
+		#asyncio.run()
 
+	def get_info(self, id):
+		yt_obj = []
+		print("getting info for " + id)
+		try:
+			if(os.path.exists("downloads/" + id + ".mp3")):
+				audio = EasyID3("downloads/" + id + ".mp3")
+				mp3 = MP3("downloads/" + id + ".mp3")
+				title = audio['title']
+				length = mp3.info.length
+				return {"id": id, "duration": length, "url": self.create_youtube_link(id), "title": title}
+		
+			else:
+				try:
+					yt_obj = MilesYoutube.find_video(self.create_youtube_link(id))[0]
+				except Exception as e:
+					print(e)
+					if(os.path.exists("downloads/" + id + ".mp3")):
+						return {"id": id, "duration": 200, "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "title": "Bofa Deez - Candice"}
+					else:
+						return None
+				return yt_obj
+		except Exception as e:
+			print(e)
+			return None
+				
 	
-	def load_playlists(self):
+	async def load_playlists(self):
 		with open(SAVE_PLAYLIST_PATH, 'r') as f:
 			for entry in f:
 				playlist = entry.strip().split(",")
 				title = playlist.pop(0)
 				self.playlists[title] = []
-				for entry in playlist:
-					yt_obj = []
-					try:
-						yt_obj = MilesYoutube.find_video(self.create_youtube_link(entry))[0]
-					except:
-						if(os.path.exists("downloads/" + entry + ".mp3")):
-							yt_obj = {"id": entry, "duration": 200, "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "title": "Bofa Deez - Candice"}
-						
-						else:
-							continue
-						
-					song = self.bot.new_song(yt_obj)
-					self.playlists[title].append(song)
+
+			loop = asyncio.get_running_loop()
+			with ThreadPoolExecutor() as executor:
+				tasks = [loop.run_in_executor(executor, self.get_info, id) for id in playlist]
+
+				results = await asyncio.gather(*tasks)
+				
+			for item in results:
+				if item:
+					song = self.bot.new_song(item)
+					self.playlists[title].append(song)	
 		return
 
 

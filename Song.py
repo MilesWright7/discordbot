@@ -25,7 +25,7 @@ class Song(object):
 
 	@property
 	def length(self):
-		return self.info['duration']
+		return int(self.info['duration'])
 
 	
 	@property

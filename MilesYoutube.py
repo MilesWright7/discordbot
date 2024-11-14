@@ -5,6 +5,8 @@ import re
 from yt_dlp import YoutubeDL
 from moviepy.video.io.VideoFileClip import VideoFileClip
 import logging
+from mutagen.easyid3 import EasyID3
+from mutagen.mp3 import MP3
 
 
 class MyLogger(object):
@@ -20,19 +22,23 @@ class MyLogger(object):
 
 ydl_opts = {
     'format': 'bestaudio/best',
-    'postprocessors': [{
+    'postprocessors': [
+		{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
         'preferredquality': '192',
-    }],
+    	},
+		{'key': 'FFmpegMetadata'}
+	],
 	'outtmpl': 'downloads/%(id)s.%(ext)s',
 	'noplaylist': True,
     'logger': MyLogger(),
-    'cookiefile': 'cookies.txt'
+    'cookiefile': 'cookies.txt',
+	'quiet': True
 }
-watch_re = re.compile('watch?v=')
-playlist_re = re.compile('playlist?list=')
-alt_yt_link_re = re.compile('youtu.be/')
+watch_re = re.compile(r'(https?://(?:www\.)?youtube\.com/watch\?v=[a-zA-Z0-9_-]{11})')
+playlist_re = re.compile(r'(https?://(?:www\.)?youtube\.com/playlist\?list=[a-zA-Z0-9_-]+)')
+alt_yt_link_re = re.compile(r'(https?://(?:www\.)?youtu\.be/[a-zA-Z0-9_-]{11})')
 yt_watch_string = "https://www.youtube.com/watch?v="
 yt_querry_string = "https://www.youtube.com/results?search_query="
 
@@ -77,8 +83,14 @@ def find_video(input:str):
 
 if __name__ == '__main__':
 	#vid = yt.search('nightcore blackout')
-	with YoutubeDL(ydl_opts) as ydl:
-		info  = ydl.extract_info('https://www.youtube.com/watch?v=i0p-dS4IbSI', download=False, process=False)
+	#download('https://www.youtube.com/watch?v=i0p-dS4IbSI')
+	audio = EasyID3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
+	mp3 = MP3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
+	title = audio['title']
+	print(title)
+	print(mp3.info.length)
+	#with YoutubeDL(ydl_opts) as ydl:
+	#	info  = ydl.extract_info('https://www.youtube.com/watch?v=i0p-dS4IbSI', download=False, process=False)
 	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
 	#print(info.keys())
 	#print(info)
