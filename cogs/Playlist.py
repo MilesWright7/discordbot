@@ -57,18 +57,18 @@ class Playlist(commands.Cog):
 				title = playlist.pop(0)
 				self.playlists[title] = []
 
-			loop = asyncio.get_running_loop()
-			with ThreadPoolExecutor() as executor:
-				tasks = [loop.run_in_executor(executor, self.get_info, id) for id in playlist]
+				loop = asyncio.get_running_loop()
+				with ThreadPoolExecutor() as executor:
+					tasks = [loop.run_in_executor(executor, self.get_info, id) for id in playlist]
 
-				results = await asyncio.gather(*tasks)
+					results = await asyncio.gather(*tasks)
 				
-			for item in results:
-				if item:
-					song = self.bot.new_song(item)
-					self.playlists[title].append(song)	
+				for item in results:
+					if item:
+						song = self.bot.new_song(item)
+						self.playlists[title].append(song)	
 
-			logging.info(f"Playlist {title} finished loading")
+				logging.info(f"Playlist {title} finished loading")
 
 		logging.info("All playlists finished loading")
 		return
