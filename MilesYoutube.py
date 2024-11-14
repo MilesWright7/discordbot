@@ -27,9 +27,10 @@ ydl_opts = {
     }],
 	'outtmpl': 'downloads/%(id)s.%(ext)s',
 	'noplaylist': True,
-    'logger': MyLogger()
+    'logger': MyLogger(),
+    'cookiefile': 'cookies.txt'
 }
-watch_re = re.compile('watch\?v=')
+watch_re = re.compile('watch?v=')
 playlist_re = re.compile('playlist\\?list=')
 alt_yt_link_re = re.compile('youtu.be/')
 yt_watch_string = "https://www.youtube.com/watch?v="
@@ -76,7 +77,8 @@ def find_video(input:str):
 
 if __name__ == '__main__':
 	#vid = yt.search('nightcore blackout')
-	print(search('no diggity song'))
+	with YoutubeDL(ydl_opts) as ydl:
+		info  = ydl.extract_info('https://www.youtube.com/watch?v=i0p-dS4IbSI', download=False, process=False)
 	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
 	#print(info.keys())
 	#print(info)
