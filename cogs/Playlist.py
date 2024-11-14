@@ -23,6 +23,7 @@ class Playlist(commands.Cog):
 	def __init__(self, bot: VoiceBot):
 		self.bot = bot
 		self.playlists = {}
+		self.loaded = False
 		asyncio.create_task(self.load_playlists())
 
 	def get_info(self, id):
@@ -71,6 +72,7 @@ class Playlist(commands.Cog):
 				logging.info(f"Playlist {title} finished loading")
 
 		logging.info("All playlists finished loading")
+		self.loaded = True
 		return
 
 
@@ -111,6 +113,11 @@ class Playlist(commands.Cog):
 		command, playlist_name, song = self.split_arg(arg)
 		command = command.lower()
 		playlist_name = playlist_name.lower()
+
+		if not self.loaded:
+			e=Embed.from_dict({"title":"Playlist","description":f"Playlists not loaded yet. Wait a bit before trying again.",}) 
+			await ctx.send(embed=e)
+			return
 		
 		# common user error. allow for swapped paramaterssa
 		if not command in COMMANDS:
