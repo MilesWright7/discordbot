@@ -6,7 +6,6 @@ import MilesYoutube
 from VoiceBot import VoiceBot
 from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
-from concurrent.futures import ThreadPoolExecutor
 import asyncio
 import logging
 
@@ -26,7 +25,7 @@ class Playlist(commands.Cog):
 		self.loaded = False
 		asyncio.create_task(self.load_playlists())
 
-	def get_info(self, id):
+	async def get_info(self, id):
 		yt_obj = []
 		try:
 			if(os.path.exists("downloads/" + id + ".mp3")):
@@ -58,11 +57,12 @@ class Playlist(commands.Cog):
 				title = playlist.pop(0)
 				self.playlists[title] = []
 
-				loop = asyncio.get_running_loop()
-				with ThreadPoolExecutor() as executor:
-					tasks = [loop.run_in_executor(executor, self.get_info, id) for id in playlist]
-
-					results = await asyncio.gather(*tasks)
+				tasks = []
+				for id in playlist:
+					tasks.append(self.get_info(id))
+					await asyncio.sleep(2)
+					
+				results = await asyncio.gather(*tasks)
 				
 				for item in results:
 					if item:

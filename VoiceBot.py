@@ -12,7 +12,6 @@ from Player import Player
 from Song import Song
 from randomBullshit.SpitroastDraftPinger import start_spitroast_pinger
 from discord.ext.commands import when_mentioned_or
-import asyncio
 
 
 class VoiceBot(commands.Bot):
