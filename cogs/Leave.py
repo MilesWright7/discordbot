@@ -12,7 +12,7 @@ class Leave(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="bot leaves")
+	@commands.hybrid_command(help="bot leaves")
 	async def leave(self, ctx):
 		player = self.bot.players[ctx.guild.id]
 		try:

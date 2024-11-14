@@ -12,7 +12,7 @@ class Queue(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="displayes queued songscan also use =q", aliases=["q"])
+	@commands.hybrid_command(help="displayes queued songscan also use =q", aliases=["q"])
 	async def queue(self, ctx):
 
 		player = self.bot.players[ctx.guild.id]

@@ -12,7 +12,7 @@ class Join(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="adds bot to your current voice channel can also use =j", aliases=['j'])
+	@commands.hybrid_command(help="adds bot to your current voice channel can also use =j", aliases=['j'])
 	async def join(self, ctx):
 		player = self.bot.players[ctx.guild.id]
 		player.main_ctx = ctx

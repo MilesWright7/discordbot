@@ -11,7 +11,7 @@ class Shuffle(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="Mixes up upcomming songs")
+	@commands.hybrid_command(help="Mixes up upcomming songs")
 	async def shuffle(self, ctx):
 
 		player = self.bot.players[ctx.guild.id]

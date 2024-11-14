@@ -13,14 +13,14 @@ class Dalle(commands.Cog):
 		self.client = OpenAI()
 
 
-	@commands.command(help="Pass me text and ill give you images. Using dalle-2", aliases=["da"])
-	async def dalle(self, ctx, *, arg):
+	@commands.hybrid_command(help="Pass me text and ill give you images. Using dalle-2", aliases=["da"])
+	async def dalle(self, ctx, *, arg : str):
 		await ctx.send(embed=Embed.from_dict({"title": "generating images", "description": f"generating images from prompt \"{arg}\".\nThis could take a bit."}))
 			
 		await ctx.send(get_images(self.client, arg))
 		
-	@commands.command(help="Pass me text and ill give you images. Using dalle-3", aliases=["da3"])
-	async def dalle3(self, ctx, *, arg):
+	@commands.hybrid_command(help="Pass me text and ill give you images. Using dalle-3", aliases=["da3"])
+	async def dalle3(self, ctx, *, arg : str):
 		await ctx.send(embed=Embed.from_dict({"title": "generating images", "description": f"generating images from prompt \"{arg}\".\nThis could take a bit."}))
 			
 		await ctx.send(get_images_improved(self.client, arg))

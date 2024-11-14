@@ -11,12 +11,13 @@ from discord.ext import commands
 from Player import Player
 from Song import Song
 from randomBullshit.SpitroastDraftPinger import start_spitroast_pinger
+from discord.ext.commands import when_mentioned_or
 import asyncio
 
 
 class VoiceBot(commands.Bot):
 	def __init__(self):
-		super().__init__(command_prefix="=", case_insensitive=True, intents=discord.Intents().all())
+		super().__init__(command_prefix=when_mentioned_or("="), case_insensitive=True, intents=discord.Intents().all())
 		self.players = {}
 
 
@@ -80,7 +81,7 @@ class VoiceBot(commands.Bot):
 
 def main():
 	
-	logging.basicConfig(filename="log.txt", level=logging.INFO,
+	logging.basicConfig(filename="log.txt", level=logging.DEBUG,
 					format="%(asctime)s %(message)s",
 					datefmt='%Y-%m-%d %H:%M:%S')
 	

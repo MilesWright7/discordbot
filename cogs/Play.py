@@ -14,8 +14,8 @@ class Play(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="adds song to queue can also use =p", aliases=["p"])
-	async def play(self, ctx, *, arg = None):
+	@commands.hybrid_command(help="adds song to queue can also use =p", aliases=["p"])
+	async def play(self, ctx, *, arg : str | None = None):
 
 		player = self.bot.players[ctx.guild.id]
 	

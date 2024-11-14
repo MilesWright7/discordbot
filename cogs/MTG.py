@@ -32,7 +32,7 @@ class MTG(commands.Cog):
 		self.bot = bot
 		
 
-	@commands.command(help="Davriel Crane Contract and Contitions. Ten seconds between offer and conditions. Choose quickly", aliases=["d"])
+	@commands.hybrid_command(help="Davriel Crane Contract and Contitions. Ten seconds between offer and conditions. Choose quickly", aliases=["d"])
 	async def davriel(self, ctx):
 		offer1, offer2, offer3 = random.sample(range(0,8),3)
 		cond1, cond2, cond3 = random.sample(range(0,8),3)

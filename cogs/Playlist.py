@@ -40,6 +40,7 @@ class Playlist(commands.Cog):
 						
 					song = self.bot.new_song(yt_obj)
 					self.playlists[title].append(song)
+		return
 
 
 	def save_playlists(self):
@@ -73,7 +74,7 @@ class Playlist(commands.Cog):
 			return [arg, "", ""]
 
 
-	@commands.command(help="Interact with the playlist feature. Usage is =playlist <add, remove, show, play> <playlist name> <song name>.", aliases=["pl"])
+	@commands.hybrid_command(help="Interact with the playlist feature", aliases=["pl"])
 	async def playlist(self, ctx, *, arg=""):
 
 		command, playlist_name, song = self.split_arg(arg)

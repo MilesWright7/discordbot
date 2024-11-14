@@ -11,7 +11,7 @@ class Clear(commands.Cog):
 		self.bot = bot
 
 
-	@commands.command(help="Clear the queue can also use =c", aliases=["c"])
+	@commands.hybrid_command(help="Clear the queue can also use =c", aliases=["c"])
 	async def clear(self, ctx):
 		player = self.bot.players[ctx.guild.id]
 		if player.looping:

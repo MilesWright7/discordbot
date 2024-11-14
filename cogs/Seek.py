@@ -12,8 +12,8 @@ class Seek(commands.Cog):
 		self.bot = bot
 
 		
-	@commands.command(help="seeks to time in current track", aliases=["jump"])
-	async def seek(self, ctx, time):
+	@commands.hybrid_command(help="seeks to time in current track", aliases=["jump"])
+	async def seek(self, ctx, time : int):
 
 		player = self.bot.players[ctx.guild.id]
 		converted_time = utils.time_to_seconds(time)
@@ -29,8 +29,8 @@ class Seek(commands.Cog):
 		await ctx.send(embed=Embed.from_dict({"title": "Seek", "description": f"Playing {player.now_playing} {utils.seconds_to_time(int(player.now_playing.current_time))}/{utils.seconds_to_time(player.now_playing.length)}"}))
 
 
-	@commands.command(help="skips the given amount of time in current track", aliases=["ff"])
-	async def fastforward(self, ctx, time):
+	@commands.hybrid_command(help="skips the given amount of time in current track", aliases=["ff"])
+	async def fastforward(self, ctx, time : int):
 
 		player = self.bot.players[ctx.guild.id]
 		converted_time = utils.time_to_seconds(time)

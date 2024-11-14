@@ -13,8 +13,8 @@ class GPT(commands.Cog):
 		self.client = OpenAI()
 
 
-	@commands.command(help="Pass me text and ill be chat gpt", aliases=["gal"])
-	async def gpt(self, ctx, *, arg):
+	@commands.hybrid_command(help="Pass me text and ill be chat gpt", aliases=["gal"])
+	async def gpt(self, ctx, *, arg : str):
 			
 		await ctx.send(get_text(self.client, arg))
 		
