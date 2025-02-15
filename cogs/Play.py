@@ -42,6 +42,10 @@ class Play(commands.Cog):
 			return
 		
 		for yt in yt_list:
+			if yt['duration'] == None:
+				await ctx.send(embed=Embed.from_dict({"title": "Play", 
+										 "description": f"issue with {yt["url"]}. Could be private video or deleted video. Regardless it isn't working."}))
+				continue
 			song = self.bot.new_song(yt)
 			if song.length > MAX_SONG_DURATION:
 				if not to_long_message_sent:
