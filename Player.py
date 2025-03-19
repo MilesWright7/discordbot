@@ -159,9 +159,10 @@ class Player(object):
 		self.VC.play(MyAudioSource(self.now_playing, self.playback_speed, self.nightcore, self.bassboost), after=self.play_next)
 		
 
-	def play_next(self, _):
+	def play_next(self, error):
 		if self.looping and self.now_playing != None:
-			self.queue(self.now_playing)
+			if error == None:
+				self.queue(self.now_playing)
 	
 		if self.VC == None:
 			return
