@@ -68,8 +68,9 @@ class Play(commands.Cog):
 	
 		if len(message) > 0:
 			await ctx.send(embed=e)
-			
-		player.play_next(None)
+		
+		if not player.is_playing():
+			player.play_next(song)
 			
 
 	def is_in_channel_with_bot(self, ctx):

@@ -116,6 +116,11 @@ class Player(object):
 
 	def shuffle(self):
 		random.shuffle(self.que)
+		
+	def is_playing(self):
+		if self.VC == None:
+			return False
+		return self.VC.is_playing()
 
 
 	def __str__(self):
