@@ -33,7 +33,6 @@ ydl_opts = {
 	'outtmpl': 'downloads/%(id)s.%(ext)s',
 	'noplaylist': True,
     'logger': MyLogger(),
-    'cookiefile': 'cookies.txt',
 	'quiet': True
 }
 watch_re = re.compile(r'(https?://(?:www\.)?youtube\.com/watch\?v=[a-zA-Z0-9_-]{11})')
@@ -82,13 +81,16 @@ def find_video(input:str):
 	
 
 if __name__ == '__main__':
-	#vid = yt.search('nightcore blackout')
+	with YoutubeDL(ydl_opts) as yt:
+		vids = find_video("https://www.youtube.com/watch?v=8VPnyp9VL70")
 	#download('https://www.youtube.com/watch?v=i0p-dS4IbSI')
-	audio = EasyID3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
-	mp3 = MP3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
-	title = audio['title']
-	print(title)
-	print(mp3.info.length)
+	#audio = EasyID3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
+	#mp3 = MP3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
+	#title = audio['title']
+	for vid in vids:
+		print(vid)
+		download("https://www.youtube.com/watch?v=8VPnyp9VL70")
+	#print(mp3.info.length)
 	#with YoutubeDL(ydl_opts) as ydl:
 	#	info  = ydl.extract_info('https://www.youtube.com/watch?v=i0p-dS4IbSI', download=False, process=False)
 	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
