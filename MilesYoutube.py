@@ -32,6 +32,7 @@ ydl_opts = {
 	],
 	'outtmpl': 'downloads/%(id)s.%(ext)s',
 	'noplaylist': True,
+	'cookiefile': 'cookies.txt',
     'logger': MyLogger(),
 	'quiet': True
 }
