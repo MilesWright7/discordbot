@@ -28,8 +28,16 @@ class Player(object):
 
 
 	async def connect(self, channel):
-		if self.VC == None or not self.VC.is_connected():
-			self.VC = await channel.connect()
+		if self.VC is None or not self.VC.is_connected():
+			if self.VC is not None:
+				self.VC.disconnect()
+			try:
+				self.VC = channel.connect()
+				print("Connected to voice!")
+			except asyncio.TimeoutError:
+				print("Voice connection timed out.")
+			except Exception as e:
+				print(f"Voice connection failed: {e}")
 		else:
 			await self.VC.move_to(channel)
 		asyncio.create_task(self.start_bot_auto_leave())
