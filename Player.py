@@ -11,7 +11,7 @@ import random
 discord.voice_client.VoiceClient
 class Player(object):
 	def __init__(self):
-		self.VC = None
+		self.VC : discord.voice_client.VoiceClient = None
 		self.que : List[Song] = []
 		self.now_playing : Optional[Song] = None
 		self.looping = False
@@ -27,12 +27,12 @@ class Player(object):
 		return len(self.que)
 
 
-	async def connect(self, channel):
+	async def connect(self, channel:discord.VoiceChannel):
 		if self.VC is None or not self.VC.is_connected():
 			if self.VC is not None:
 				self.VC.disconnect()
 			try:
-				self.VC = channel.connect()
+				self.VC = await channel.connect()
 				print("Connected to voice!")
 			except asyncio.TimeoutError:
 				print("Voice connection timed out.")
@@ -41,6 +41,7 @@ class Player(object):
 		else:
 			await self.VC.move_to(channel)
 		asyncio.create_task(self.start_bot_auto_leave())
+		print(f"connected ? = {self.VC.is_connected()}")
 		return 
 
 
