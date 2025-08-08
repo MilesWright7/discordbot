@@ -7,6 +7,7 @@ from moviepy.video.io.VideoFileClip import VideoFileClip
 import logging
 from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
+import Song
 
 
 class MyLogger(object):
@@ -36,11 +37,27 @@ ydl_opts = {
     'logger': MyLogger(),
 	'quiet': True
 }
+soundcloud_opts = {
+    'format': 'bestaudio/best',
+    'postprocessors': [
+		{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    	},
+		{'key': 'FFmpegMetadata'}
+	],
+	'outtmpl': 'downloads/%(id)s.%(ext)s',
+	'noplaylist': True,
+    'logger': MyLogger(),
+	'quiet': True
+}
 watch_re = re.compile(r'(https?://(?:www\.)?youtube\.com/watch\?v=[a-zA-Z0-9_-]{11})')
 playlist_re = re.compile(r'(https?://(?:www\.)?youtube\.com/playlist\?list=[a-zA-Z0-9_-]+)')
 alt_yt_link_re = re.compile(r'(https?://(?:www\.)?youtu\.be/[a-zA-Z0-9_-]{11})')
 yt_watch_string = "https://www.youtube.com/watch?v="
 yt_querry_string = "https://www.youtube.com/results?search_query="
+soundcloud_regex = re.compile(r'^(?:https?://)?(?:www\.)?soundcloud\.com/[\w-]+/[\w-]+(?:\?.*)?$', re.IGNORECASE)
 
 
 
@@ -56,12 +73,18 @@ def search(keyword:str):
 
 
 def download(url:str):
-	with YoutubeDL(ydl_opts) as ydl:
+	opts = ydl_opts
+	if soundcloud_regex.search(url):
+		opts = soundcloud_opts
+	with YoutubeDL(opts) as ydl:
 		ydl.download(url)
 		logging.debug(f"Sucessfully downloaded {url}")
 		
 
 def find_video(input:str):
+	if soundcloud_regex.search(input):
+		with YoutubeDL(soundcloud_opts) as ydl:
+			return (ydl.extract_info(input, download=False, process=False))
 	with YoutubeDL(ydl_opts) as ydl:
 		# for links of only one video
 		alt_youtube_link = alt_yt_link_re.search(input)
@@ -79,26 +102,11 @@ def find_video(input:str):
 
 		return (ydl.extract_info(search(input), download=False, process=False),)
 
-	
 
 if __name__ == '__main__':
-	with YoutubeDL(ydl_opts) as yt:
-		vids = find_video("https://www.youtube.com/watch?v=8VPnyp9VL70")
-	#download('https://www.youtube.com/watch?v=i0p-dS4IbSI')
-	#audio = EasyID3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
-	#mp3 = MP3("downloads/" + 'i0p-dS4IbSI' + ".mp3")
-	#title = audio['title']
-	for vid in vids:
-		print(vid)
-		download("https://www.youtube.com/watch?v=8VPnyp9VL70")
-	#print(mp3.info.length)
-	#with YoutubeDL(ydl_opts) as ydl:
-	#	info  = ydl.extract_info('https://www.youtube.com/watch?v=i0p-dS4IbSI', download=False, process=False)
-	#info  = yt.ydl.extract_info('https://www.youtube.com/playlist?list=PLDCF162D5581F9725', download=False, process=False)
-	#print(info.keys())
-	#print(info)
-	#for item in info['entries']:
-	#	print(item)
-	#yt.ydl.download(info['webpage_url'])
+	song = Song.Song(find_video("https://soundcloud.com/yaaa03/dont_stop_the_music"))
+	print(song.is_downloaded)
+	print(song.length)
+	song.download()
 	
 

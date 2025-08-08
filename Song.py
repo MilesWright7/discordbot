@@ -31,14 +31,19 @@ class Song(object):
 	@property
 	def video_id(self):
 		return self.info['id']
+	
 
+	@property
+	def source(self):
+		return self.info['extractor']
+	
 
 	def location(self):
 		string = self.folder
 		string += self.video_id
 		string += ".mp3"
 		return string
-
+	
 
 	def is_downloaded(self):
 		return os.path.exists(self.location())

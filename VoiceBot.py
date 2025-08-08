@@ -12,11 +12,12 @@ from Player import Player
 from Song import Song
 from randomBullshit.SpitroastDraftPinger import start_spitroast_pinger
 from discord.ext.commands import when_mentioned_or
+import discord.opus
 
 
 class VoiceBot(commands.Bot):
 	def __init__(self):
-		super().__init__(command_prefix=when_mentioned_or("="), case_insensitive=True, intents=discord.Intents().all())
+		super().__init__(command_prefix=when_mentioned_or("="), case_insensitive=True, intents=discord.Intents.all())
 		self.players = {}
 
 
@@ -35,6 +36,14 @@ class VoiceBot(commands.Bot):
 		await self.change_presence(status=discord.Status.online, activity=discord.Game("@Miles if I break"));
 		logging.info("Voice bot online!")
 		# await asyncio.create_task(start_spitroast_pinger(self))
+		
+		if not discord.opus.is_loaded():
+			try:
+				discord.opus._load_default()  # May be 'opus' or 'libopus-0.dll' on Windows
+			except Exception as e:
+				print(f"Failed to load opus: {e}")
+
+			print("Opus loaded:", discord.opus.is_loaded())
 
 
 	async def on_guild_join(self, guild):
