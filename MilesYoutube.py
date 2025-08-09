@@ -84,7 +84,7 @@ def download(url:str):
 def find_video(input:str):
 	if soundcloud_regex.search(input):
 		with YoutubeDL(soundcloud_opts) as ydl:
-			return (ydl.extract_info(input, download=False, process=False))
+			return (ydl.extract_info(input, download=False, process=False),)
 	with YoutubeDL(ydl_opts) as ydl:
 		# for links of only one video
 		alt_youtube_link = alt_yt_link_re.search(input)
