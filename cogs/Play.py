@@ -33,7 +33,7 @@ class Play(commands.Cog):
 																																  "description": "=play low rider"}))
 			return
 		
-		yt_list = MilesYoutube.find_video(arg)
+		yt_list = await MilesYoutube.find_video(arg)
 		message = ""
 		to_long_message_sent = False
 		if len(yt_list) == 0:

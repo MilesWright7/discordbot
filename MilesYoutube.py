@@ -81,10 +81,11 @@ def download(url:str):
 		logging.debug(f"Sucessfully downloaded {url}")
 		
 
-def find_video(input:str):
+async def find_video(input:str):
 	if soundcloud_regex.search(input):
 		with YoutubeDL(soundcloud_opts) as ydl:
 			return (ydl.extract_info(input, download=False, process=False),)
+			
 	with YoutubeDL(ydl_opts) as ydl:
 		# for links of only one video
 		alt_youtube_link = alt_yt_link_re.search(input)
@@ -98,9 +99,8 @@ def find_video(input:str):
 		if playlist_search:
 			info = ydl.extract_info(input, download=False, process=False)
 			return list(info['entries'])
-		
-
-		return (ydl.extract_info(search(input), download=False, process=False),)
+			
+		return (ydl.extract_info(search(input), download=False, process=False),)	
 
 
 if __name__ == '__main__':
